@@ -27,7 +27,8 @@ github_username: jim-shaw-bluenote
 remote_theme: eliottvincent/bay
 plugins:
   - jekyll-feed
-
+  - jekyll-paginate
+  - jekyll-sitemap
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
