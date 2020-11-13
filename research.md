@@ -3,9 +3,9 @@ layout: work
 title: Research Interests
 ---
 
-I'm interested in a wide range of problems in computational genomics/data science. Genomics problems that I'm interested in include assembly, haplotyping, and anything related to metagenomics. I also have a passing interest in topological data analysis. 
+I'm interested in a wide range of problems in computational genomics and data science. Genomics problems that I'm particularly fond of include assembly, haplotyping, and anything related to metagenomics. I also have a non-trivial interest in topological data analysis. 
 
-See my [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) for a list of my publications.
+My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
 ## Pre-prints and published articles
 
