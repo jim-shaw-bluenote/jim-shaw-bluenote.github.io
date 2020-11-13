@@ -2,7 +2,7 @@
 title: Jim Shaw
 email: jshaw@math.toronto.edu
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jim-shaw-bluenote.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jim-shaw-bluenote.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: jim-shaw-bluenote
 
 
