@@ -1,4 +1,10 @@
 # Welcome to Jekyll!
+title: Jim Shaw
+email: jshaw@math.toronto.edu
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jim-shaw-bluenote.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: jim-shaw-bluenote
+
 
 header:
     pages:
@@ -14,13 +20,6 @@ footer:
   follow:
     - name: GitHub
       link: http://github.com/bluenote-1577
-
-title: Jim Shaw
-email: your-email@example.com
-description: Personal website
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jim-shaw-bluenote.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: jim-shaw-bluenote
 
 # Build settings
 #theme: bay_jekyll_theme
