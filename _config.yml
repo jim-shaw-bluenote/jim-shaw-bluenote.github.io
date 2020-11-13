@@ -1,0 +1,48 @@
+# Welcome to Jekyll!
+
+header:
+    pages:
+        - name: Home
+          slug: /     # <-- index.md
+        - name: Research  # <-- whatever.md
+
+footer:
+  show_powered_by: true
+  contact:
+    - name: Email
+      value: jshaw_at_math.toronto.edu
+  follow:
+    - name: GitHub
+      link: http://github.com/bluenote-1577
+
+title: Jim Shaw
+email: your-email@example.com
+description: Personal website
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jim-shaw-bluenote.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: bluenote-1577
+
+# Build settings
+theme: bay_jekyll_theme
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
