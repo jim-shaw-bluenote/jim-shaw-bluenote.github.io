@@ -24,7 +24,7 @@ github_username: bluenote-1577
 
 # Build settings
 theme: bay_jekyll_theme
-remote_theme: bay_jekyll_theme
+#remote_theme: eliottvincent/bay
 plugins:
   - jekyll-feed
 
