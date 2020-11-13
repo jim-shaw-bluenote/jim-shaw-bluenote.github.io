@@ -23,8 +23,8 @@ url: "http://jim-shaw-bluenote.github.io" # the base hostname & protocol for you
 github_username: bluenote-1577
 
 # Build settings
-theme: bay_jekyll_theme
-#remote_theme: eliottvincent/bay
+#theme: bay_jekyll_theme
+remote_theme: eliottvincent/bay
 plugins:
   - jekyll-feed
 
