@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Software
+slug: /software
 ---
 
 Here's a list of software that I've been involved with creating. 
