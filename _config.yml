@@ -11,6 +11,8 @@ header:
         - name: Home
           slug: /     # <-- index.md
         - name: Research  # <-- whatever.md
+        - name: Software # <-- whatever.md
+
 
 footer:
   show_powered_by: true
