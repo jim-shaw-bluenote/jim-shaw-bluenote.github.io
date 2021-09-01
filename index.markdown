@@ -2,7 +2,7 @@
 layout: home
 title: Jim Shaw
 profile_picture:
-  src: images/JIM-291x300@2x.jpg
+  src: images/JIM-291x300.jpg
   alt: Jim Shaw
 ---
 
