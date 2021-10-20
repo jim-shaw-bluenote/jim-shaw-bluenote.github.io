@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Jim Shaw
+title: About
 ---
 <img align="right" width="200" height="300" src="/images/JIM-291x300.jpg">
 
