@@ -4,7 +4,7 @@ title: Research Interests
 slug: /research
 ---
 
-I'm interested in a wide range of problems in computational genomics and data science. Genomics problems that I'm particularly fond of include assembly, haplotyping, and anything related to metagenomics. I also have a non-trivial interest in topological data analysis. 
+I'm interested in a wide range of problems in computational genomics and data science from both a mathematical and applied point of view. Genomics problems that I'm particularly fond of include sequence alignment, haplotyping, and anything related to metagenomics.
 
 My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
