@@ -10,6 +10,7 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 ## Pre-prints and published articles
 
+1. Martin Frith, Jim Shaw, John Spouge. [How to optimally sample a sequence for rapid analysis](https://www.biorxiv.org/content/10.1101/2022.08.18.504476v1) (2022). bioRxiv.  
 1. Jim Shaw, Yun William Yu. [Theory of local k-mer selection with applications to long-read alignment](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btab790/6432031) (2021). Bioinformatics.  
 2. Jim Shaw, Yun William Yu. [Practical probabilistic and graphical formulations of long-read polyploid haplotype phasing](https://doi.org/10.1089/cmb.2021.0436) (2022). Journal of Computational Biology: *RECOMB 2021 Issue*.
 3. Ryan Cotsakis, Jim Shaw, Julien Tierny, Joshua Levine. [Implementing Persistence-Based Clustering of Point Clouds in the Topology ToolKit](https://doi.org/10.1007/978-3-030-83500-2_17) (2021). Topological Methods in Data Analysis and Visualization VI. Mathematics and Visualization.
