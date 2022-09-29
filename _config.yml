@@ -12,6 +12,7 @@ header:
           slug: /     # <-- index.md
         - name: Research  # <-- whatever.md
         - name: Software # <-- whatever.md
+        - name: Posts # <-- whatever.md
 
 
 footer:
@@ -25,11 +26,12 @@ footer:
 
 # Build settings
 #theme: bay_jekyll_theme
-remote_theme: eliottvincent/bay
+remote_theme: bluenote-1577/bay
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
