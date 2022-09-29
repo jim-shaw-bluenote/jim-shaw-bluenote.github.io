@@ -7,7 +7,7 @@ categories: jekyll update
 
 # Probabilistic setup of sequence assembly outputs
 
-When one learns about doing sequence assembly, the first definition they often learn about is N50. N50 is commonly defined as the size $$L$$ of the smallest contig such that summing all contigs of size $$\geq L$$ gives at least half of the total sequence assembly length. The reason for using N50 intuitively is that we don't want small contigs, of which there may be many, to skew the average contig length. See [here](http://www.acgt.me/blog/2013/7/8/why-is-n50-used-as-an-assembly-metric.html) or the [Wikipedia article](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics) for more info. 
+When one analyzes sequence assemblies, a mysterious definition they inevitably encounter is the N50. N50 is commonly defined as the size $$L$$ of the smallest contig such that summing all contigs of size $$\geq L$$ gives at least half of the total sequence assembly length. The reason for using N50 intuitively is that we don't want small contigs, of which there may be many, to skew the average contig length. See [here](http://www.acgt.me/blog/2013/7/8/why-is-n50-used-as-an-assembly-metric.html) or the [Wikipedia article](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics) for more info. 
 
 Given a set of contigs coming from an assembly, how does the N50 relate to the average contig length? This may seem like a silly question because they aren't related in general; you can easily come up with distributions of contig sizes with fixed average length and wildly varying N50s. However, I'll show that under some (maybe not so mild) assumptions, the average contig length and N50 are related by a surprisingly simple formula.
 
@@ -17,21 +17,23 @@ Let's make the following assumptions:
 
 2. Assume that $$x_i$$ are random, i.i.d, and exponentially distributed $$x_i \sim Exp(\frac{1}{\lambda})$$ with mean length $$\lambda.$$ Contigs have continuous, random size in our setup. 
 
-I chose an exponential distribution because contig lengths tend to have a heavy tail with a few large contigs, and many small ones. 
+I chose an exponential distribution because contig lengths tend to have a heavy tail with a few large contigs and many small ones. 
 
-Under our probabilistic setup, the average length of the contigs are $$\mathbb{E}[x_i] = \lambda$$, but _can we calculate what the N50 is analytically?_
+Under our probabilistic setup, the average length of the contigs is $$\mathbb{E}[x_i] = \lambda$$, but _can we calculate what the N50 is analytically?_
 
 # Defining N50 probabilistically
 
 The N50 is now a random variable. First, let's define the N50 rigorously.
 
-_Definition_: The random variable N50 is defined as the smallest N50 $$= x_j$$ such that 
+_Definition_: The random variable N50 is defined as the smallest $$x_j = N_{50}$$ such that 
 
 $$\sum_{x_i \geq N50} x_i = \sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50} \geq \frac{N}{2}.$$
 
-This is just a mathematical generalization of the original definition of the N50. It's a bit tricky to work with this random variable, so I'll introduce another definition for now. 
+This is just a mathematical generalization of the original definition of the N50. It's a bit tricky to work with this random variable, so I'll introduce another notion of the N50 called the _fixed_ N50. 
 
-_Definition_: The fixed N50 is a constant $$\sigma$$ satisfying $$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}] = \frac{\mathbb{E}[N]}{2}$$ 
+_Definition_: The fixed N50 is a constant $$\sigma$$ satisfying 
+
+$$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}] = \frac{\mathbb{E}[N]}{2}.$$ 
 
 The fixed N50 is not a random variable, but a specific constant defined to satisfy an equation. Intuitively, the fixed N50 is what we believe the expected value of N50 should be when $$n$$ gets really large.  Here is a suggestive sketch of an argument. 
 
@@ -39,21 +41,21 @@ Notice that
 
 $$\frac{N}{2} + \max_{m=1,...,n} x_m \geq \sum_{x_i \geq N50} x_i \geq \frac{N}{2}$$
 
-follows after thinking about the definition of the N50 for a bit. It turns that $$\max x_m = o(n)$$; one can mess around with exponential R.Vs to get this. Then taking expectations where $$\mathbb{E}[N] = n \lambda$$ and dividing by $$n$$, we get that
+follows after thinking about the definition of the N50 for a bit. It turns that $$\mathbb{E}[\max_{m=1,...,n} x_m] = \sum_{i=1}^n \frac{1}{i} = O(\log n)$$ is the nth harmonic number, see [this explanation](https://stats.stackexchange.com/questions/324274/how-to-find-the-expectation-of-the-maximum-of-independent-exponential-variables). Then taking expectations where $$\mathbb{E}[N] = n \lambda$$ and dividing by $$n$$, we get that
 
-$$\frac{\lambda}{2} + o(1) > \mathbb{E}[\sum_{i=1}^n X_i \mathbb{1}_{x_i \geq N50}] \geq \frac{\lambda}{2}.$$
+$$\frac{\lambda}{2} + o(1) > \frac{\mathbb{E}[\sum_{i=1}^n X_i \mathbb{1}_{x_i \geq N50}]}{n} \geq \frac{\lambda}{2}.$$
 
-So $$\mathbb{E}[\sum_{x_i \geq N50} x_i] \rightarrow \lambda/2.$$ Thus, from the definition of fixed N50,
+So $$\mathbb{E}[\sum_{x_i \geq N50} x_i] \rightarrow \lambda/(2n).$$ Thus, from the definition of fixed N50,
 
-$$\lim_{n \rightarrow \infty} \mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50}] = \mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}]$$
+$$\lim_{n \rightarrow \infty} \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50}]}{n} = \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}]}{n}.$$
 
-This is the reason behind the definition, and suggests that $$N50 \rightarrow \sigma$$ is some sense -- either in expectation and maybe in a stronger sense i.e. in probability?
+This is the reason behind the definition, and suggests that $$N50 \rightarrow \sigma$$ is some sense -- either in expectation and maybe in a stronger sense i.e. in probability? I believe that if one is careful enough, they could prove from this that if N50 were to converge to a constant in probability, it would have to be $$\sigma$$.
 
 I haven't been able to actually prove that $$\mathbb{E}[N_{50}] \rightarrow \sigma$$. In my simulations, it seems to be the case that $$\mathbb{E}[N_{50}] \rightarrow \sigma$$. Let's just assume that these quantities are related for the rest of the post. Maybe someone else can take a stab at it; let me know how it goes! 
 
 # Calculating the fixed N50
 
-It turns out we can actually calculate the fixed N50 as follows. Because $$\sigma$$ is a constant, $$x_i \mathbb{1}_{x_i \geq \sigma}$$ are identically distributed. Thus to find the fixed N50, we just have to solve the equation
+We can actually calculate the fixed N50 as follows. Because $$\sigma$$ is a constant, $$x_i \mathbb{1}_{x_i \geq \sigma}$$ are identically distributed. Thus to find the fixed N50, we just have to solve the equation
 
 $$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}] = n \int_{z \geq  \sigma}^\infty z \frac{1}{\lambda} e^{-\frac{z}{\lambda}} dz = \frac{n \lambda }{2}$$
  
@@ -83,7 +85,7 @@ This equation still isn't easy to solve, but luckily, this type of equation pops
 
 $$\sigma / \lambda = 1.6783469...$$
 
-__So it turns out that $$\sigma$$, the fixed N50, is a constant multiple of the average contig length!__
+__So $$\sigma$$, the fixed N50, is a constant multiple of the average contig length!__
 
 It seems that this value $$1.6783469...$$ appears elsewhere in statistical theory. A quick google search yields the article "Asymptotic Inversion of Incomplete Gamma Functions" by N.M Temme (1992) as an example where this value appears. 
 
@@ -98,7 +100,7 @@ To investigate a more raw dataset, I took a set of MAGs, i.e. metagenome assembl
 
 ![Actual N50/Average length distribution](/assets/img/empirical_n50_avg_len_ratio.png)
 
-It turns out that the predicted N50/Average length ratio is about 5 percent off from the empirical value. Considering how often and how badly theoretical models fail in bioinformatics, I'll consider this a win :).
+It turns out that the predicted N50/Average length ratio is about 3.4 percent off from the empirical value. Considering how often and how badly theoretical models fail in bioinformatics, I'll consider this a win :).
 
 
 
