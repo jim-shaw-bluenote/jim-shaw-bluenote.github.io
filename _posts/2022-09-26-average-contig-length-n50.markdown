@@ -45,7 +45,7 @@ follows after thinking about the definition of the N50 for a bit. It turns that 
 
 $$\frac{\lambda}{2} + o(1) > \frac{\mathbb{E}[\sum_{i=1}^n X_i \mathbb{1}_{x_i \geq N50}]}{n} \geq \frac{\lambda}{2}.$$
 
-So $$\mathbb{E}[\sum_{x_i \geq N50} x_i] \rightarrow \lambda/(2n).$$ Thus, from the definition of fixed N50,
+So $$\mathbb{E}[\sum_{x_i \geq N50} x_i] \rightarrow \lambda/2.$$ Thus, from the definition of fixed N50,
 
 $$\lim_{n \rightarrow \infty} \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50}]}{n} = \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}]}{n}.$$
 
