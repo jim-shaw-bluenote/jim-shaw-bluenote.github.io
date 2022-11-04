@@ -22,7 +22,7 @@ Therefore, in order to break through the $$O(mn)$$ runtime barrier, we use avera
 
 # Random input model
 
-To do average-case analysis, we need a random model on our inputs to take an expectation over. When we align sequences, we generally believe there is some similarity between them, so aligning two random strings isn't the correct model. We instead use an independent substitution model. We let $$S$$ be a random string, and $$S'$$ be a mutated version where every base in _a substring of_ $$S$$ is mutated to a different letter with probability $$\theta$$. The length of $$S$$ is $$\sim n$$ and $$S'$$ is $$\sim m$$ where $$\sim$$ hides factors of $$k$$ lurking around; see Section 2 for clarification. 
+To do average-case analysis, we need a random model on our inputs to take an expectation over. When we align sequences, we generally believe there is some similarity between them, so aligning two random strings isn't the correct model. We instead use an independent substitution model. We let $$S$$ be a random string, and $$S'$$ be a mutated substring of $$S$$ where we take a substring of $$S$$ and then mutate each character to a different letter with probability $$\theta$$. The length of $$S$$ is $$\sim n$$ and $$S'$$ is $$\sim m$$ where $$\sim$$ hides factors of $$k$$ lurking around; see Section 2 for clarification. 
 
 We don't model indels, but such independent substitution models have been used before to model k-mer statistics relatively well (e.g. mash). In my opinion, the much bigger issue is that repeats aren't correctly modeled; if someone wants to take a stab at modeling random mutating string models with repeats, let me know!
 
