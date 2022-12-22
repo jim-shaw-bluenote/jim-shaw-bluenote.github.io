@@ -33,19 +33,19 @@ This is just a mathematical generalization of the original definition of the N50
 
 _Definition_: The fixed N50 is a constant $$\sigma$$ satisfying 
 
-$$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}] = \frac{\mathbb{E}[N]}{2}.$$ 
+$$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}] = \frac{\mathbb{E}[N]}{2} = \frac{\lambda}{2}.$$ 
 
 The fixed N50 is not a random variable, but a specific constant defined to satisfy an equation. Intuitively, the fixed N50 is what we believe the expected value of N50 should be when $$n$$ gets really large.  Here is a suggestive sketch of an argument. 
 
 Notice that 
 
-$$\frac{N}{2} + \max_{m=1,...,n} x_m \geq \sum_{x_i \geq N50} x_i \geq \frac{N}{2}$$
+$$\frac{N}{2} + \max_{m=1,...,n} x_m \geq \sum_{x_i \geq N50} x_i = \sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50} \geq \frac{N}{2}$$
 
 follows after thinking about the definition of the N50 for a bit. It turns that $$\mathbb{E}[\max_{m=1,...,n} x_m] = \sum_{i=1}^n \frac{1}{i} = O(\log n)$$ is the nth harmonic number, see [this explanation](https://stats.stackexchange.com/questions/324274/how-to-find-the-expectation-of-the-maximum-of-independent-exponential-variables). Then taking expectations where $$\mathbb{E}[N] = n \lambda$$ and dividing by $$n$$, we get that
 
 $$\frac{\lambda}{2} + o(1) > \frac{\mathbb{E}[\sum_{i=1}^n X_i \mathbb{1}_{x_i \geq N50}]}{n} \geq \frac{\lambda}{2}.$$
 
-So $$\mathbb{E}[\sum_{x_i \geq N50} x_i] \rightarrow \lambda/2.$$ Thus, from the definition of fixed N50,
+So $$\frac{\mathbb{E}[\sum_{x_i \geq N50} x_i]}{n} \rightarrow \lambda/2.$$ Thus, from the definition of fixed N50,
 
 $$\lim_{n \rightarrow \infty} \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50}]}{n} = \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}]}{n}.$$
 
