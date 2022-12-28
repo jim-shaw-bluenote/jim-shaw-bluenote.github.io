@@ -17,7 +17,7 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 4. Jim Shaw, Yun William Yu. [Practical probabilistic and graphical formulations of long-read polyploid haplotype phasing](https://doi.org/10.1089/cmb.2021.0436) (2022). Journal of Computational Biology: *RECOMB 2021 Issue*.
 5. Tom Ouellette, Jim Shaw, Philip Awadalla. [Using image-based haplotype alignments to map global adaptation of SARS-CoV-2](https://www.biorxiv.org/content/10.1101/2021.01.13.426571v1.abstract) (2020). bioRxiv.
 6. Ryan Cotsakis, Jim Shaw, Julien Tierny, Joshua Levine. [Implementing Persistence-Based Clustering of Point Clouds in the Topology ToolKit](https://doi.org/10.1007/978-3-030-83500-2_17) (2021). Topological Methods in Data Analysis and Visualization VI. Mathematics and Visualization.
-7. Simone Hu, Oliver Schnetz, Jim Shaw, Karen Yeats. [Further investigations into the graph theory of phi^4-periods and the c2 invariant](https://arxiv.org/abs/1812.08751) (2020). Accepted for publication in Annales de l'Institut Henri Poincare D.
+7. Simone Hu, Oliver Schnetz, Jim Shaw, Karen Yeats. [Further investigations into the graph theory of phi^4-periods and the c2 invariant](https://doi.org/10.4171/aihpd/123) (2020). Annales de l'Institut Henri Poincare D.
 8. D. Bertrand, J. Shaw, M Narayan, H.Q.A. Ng, S. Kumar, C. Li, M. Dvornicic, J.P. Soldo, J.Y. Kho, O.T. Ng, T. Barkham, B. Young, K. Marimuthu, K.R. Chng, M. Sikic, N. Nagarajan. [Hybrid metagenomic assembly enables high-resolution analysis of resistance determinants and mobile elements in human microbiomes](https://www.nature.com/articles/s41587-019-0191-2) (2019). Nature Biotechnology.
 
 
