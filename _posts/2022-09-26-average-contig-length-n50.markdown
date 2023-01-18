@@ -23,39 +23,39 @@ Under our probabilistic setup, the average length of the contigs is $$\mathbb{E}
 
 # Defining N50 probabilistically
 
-The N50 is now a random variable. First, let's define the N50 rigorously.
+First, let's define the _empirical N50_ rigorously.
 
-_Definition_: The random variable N50 is defined as the smallest $$x_j = N_{50}$$ such that 
+_Definition_: The empirical N50, $$\hat{N_{50}}$$, is a random variable defined as the smallest $$x_j  = \hat{N_{50}}$$ where $$x_j \in \{x_1,...,x_n\}$$ such that 
 
-$$\sum_{x_i \geq N50} x_i = \sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50} \geq \frac{N}{2}.$$
+$$\sum_{x_i \geq \hat{N_{50}}} x_i = \sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \hat{N_{50}}} \geq \frac{N}{2}.$$
 
-This is just a mathematical generalization of the original definition of the N50. It's a bit tricky to work with this random variable, so I'll introduce another notion of the N50 called the _fixed_ N50. 
+This is just a mathematical generalization of the original definition of the N50 if you have a bunch of samples (i.e. contigs). Now I'll introduce a probabilistic definition of the N50. 
 
-_Definition_: The fixed N50 is a constant $$\sigma$$ satisfying 
+_Definition_: The N50 is a constant $$N_{50}$$ satisfying 
 
-$$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}] = \frac{\mathbb{E}[N]}{2} = \frac{\lambda}{2}.$$ 
+$$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N_{50}}] = \frac{\mathbb{E}[N]}{2} = \frac{n\lambda}{2}.$$ 
 
-The fixed N50 is not a random variable, but a specific constant defined to satisfy an equation. Intuitively, the fixed N50 is what we believe the expected value of N50 should be when $$n$$ gets really large.  Here is a suggestive sketch of an argument. 
+The N50 is not a random variable, but a specific constant defined to satisfy an equation. Intuitively, the N50 is what we believe the value of empirical N50, $$\hat{N_{50}}$$, should be when $$n$$, the number of samples, gets really large. Notice that this is essentially a generalization of the probabilistic definition of the median and the empirical median. Here is a suggestive sketch of an argument that these two quantities are related.  
 
 Notice that 
 
-$$\frac{N}{2} + \max_{m=1,...,n} x_m \geq \sum_{x_i \geq N50} x_i = \sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50} \geq \frac{N}{2}$$
+$$\frac{N}{2} + \max_{m=1,...,n} x_m \geq \sum_{x_i \geq \hat{N_{50}}} x_i = \sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \hat{N_{50}}} \geq \frac{N}{2}$$
 
-follows after thinking about the definition of the N50 for a bit. It turns that $$\mathbb{E}[\max_{m=1,...,n} x_m] = \sum_{i=1}^n \frac{1}{i} = O(\log n)$$ is the nth harmonic number, see [this explanation](https://stats.stackexchange.com/questions/324274/how-to-find-the-expectation-of-the-maximum-of-independent-exponential-variables). Then taking expectations where $$\mathbb{E}[N] = n \lambda$$ and dividing by $$n$$, we get that
+follows after thinking about the definition of the empirical N50 for a bit. It turns that $$\mathbb{E}[\max_{m=1,...,n} x_m] = \sum_{i=1}^n \frac{1}{i} = O(\log n)$$ is the nth harmonic number, see [this explanation](https://stats.stackexchange.com/questions/324274/how-to-find-the-expectation-of-the-maximum-of-independent-exponential-variables). Then taking expectations where $$\mathbb{E}[N] = n \lambda$$ and dividing by $$n$$, we get that
 
-$$\frac{\lambda}{2} + o(1) > \frac{\mathbb{E}[\sum_{i=1}^n X_i \mathbb{1}_{x_i \geq N50}]}{n} \geq \frac{\lambda}{2}.$$
+$$\frac{\lambda}{2} + o(1) > \frac{\mathbb{E}[\sum_{i=1}^n X_i \mathbb{1}_{x_i \geq N_{50}}]}{n} \geq \frac{\lambda}{2}.$$
 
-So $$\frac{\mathbb{E}[\sum_{x_i \geq N50} x_i]}{n} \rightarrow \lambda/2.$$ Thus, from the definition of fixed N50,
+So $$\frac{\mathbb{E}[\sum_{x_i \geq \hat{N_{50}}} x_i]}{n} \rightarrow \lambda/2.$$ Thus, from the definition of empirical N50,
 
-$$\lim_{n \rightarrow \infty} \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N50}]}{n} = \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}]}{n}.$$
+$$\lim_{n \rightarrow \infty} \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \hat{N_{50}}}]}{n} = \frac{\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq N_{50}}]}{n}.$$
 
-This is the reason behind the definition, and suggests that $$N50 \rightarrow \sigma$$ is some sense -- either in expectation and maybe in a stronger sense i.e. in probability? I believe that if one is careful enough, they could prove from this that if N50 were to converge to a constant in probability, it would have to be $$\sigma$$.
+This is the reason behind the definition, and suggests that $$\hat{N_{50}} \rightarrow N_{50}$$ is some sense, probably in probability.  
 
-I haven't been able to actually prove that $$\mathbb{E}[N_{50}] \rightarrow \sigma$$. In my simulations, it seems to be the case that $$\mathbb{E}[N_{50}] \rightarrow \sigma$$. Let's just assume that these quantities are related for the rest of the post. Maybe someone else can take a stab at it; let me know how it goes! 
+I haven't tried too hard to prove that $$\hat{N_{50}} \rightarrow N_{50}$$ as n gets large. The proof should probably be similar to the [proof that the empirical median converges to the true median](https://stats.stackexchange.com/questions/72023/convergence-in-probability-of-empirical-median). In my simulations, it seems to be the case that $$\mathbb{E}[\hat{N_{50}}] \rightarrow N_{50}$$, so let's just assume that these quantities are related for the rest of the post. Maybe someone else can take a stab at it; let me know how it goes! 
 
-# Calculating the fixed N50
+# Calculating the N50
 
-We can actually calculate the fixed N50 as follows. Because $$\sigma$$ is a constant, $$x_i \mathbb{1}_{x_i \geq \sigma}$$ are identically distributed. Thus to find the fixed N50, we just have to solve the equation
+Let's define $$\sigma = N_{50}$$ for the rest of the post, for ease of notation. We can actually calculate the N50 as follows. Because $$\sigma$$ is a constant, $$x_i \mathbb{1}_{x_i \geq \sigma}$$ are identically distributed. Thus to find the N50, we just have to solve the equation
 
 $$\mathbb{E}[\sum_{i=1}^n x_i \mathbb{1}_{x_i \geq \sigma}] = n \int_{z \geq  \sigma}^\infty z \frac{1}{\lambda} e^{-\frac{z}{\lambda}} dz = \frac{n \lambda }{2}$$
  
@@ -85,7 +85,7 @@ This equation still isn't easy to solve, but luckily, this type of equation pops
 
 $$\sigma / \lambda = 1.6783469...$$
 
-__So $$\sigma$$, the fixed N50, is a constant multiple of the average contig length!__
+__So $$\sigma$$, the N50, is a constant multiple of the average contig length!__
 
 It seems that this value $$1.6783469...$$ appears elsewhere in statistical theory. A quick google search yields the article "Asymptotic Inversion of Incomplete Gamma Functions" by N.M Temme (1992) as an example where this value appears. 
 
