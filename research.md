@@ -8,7 +8,7 @@ I'm interested in a wide range of problems in computational genomics and data sc
 
 My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
-## Pre-prints and published articles
+## Pre-prints and published articles (in order of original pre-printing)
 1. Jim Shaw, Yun William Yu. [Fast and robust metagenomic sequence comparison through sparse chaining with skani](https://www.biorxiv.org/content/10.1101/2023.01.18.524587v1) (2023). bioRxiv.
 2. Andrew Zheng, Jim Shaw, Yun William Yu. [Mora: abundance aware metagenomic read re-assignment for disentangling similar strains](https://www.biorxiv.org/content/10.1101/2022.10.18.512733v1) (2022). bioRxiv. 
 3. Jim Shaw, Yun William Yu. [Proving sequence aligners can guarantee accuracy in almost O(m log n) time through an average-case analysis of the seed-chain-extend heuristic](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122.abstract) (2023). Genome Research.  
