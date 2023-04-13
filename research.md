@@ -20,9 +20,9 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 9. Simone Hu, Oliver Schnetz, Jim Shaw, Karen Yeats. [Further investigations into the graph theory of phi^4-periods and the c2 invariant](https://doi.org/10.4171/aihpd/123) (2020). Annales de l'Institut Henri Poincare D.
 10. D. Bertrand, J. Shaw, M Narayan, H.Q.A. Ng, S. Kumar, C. Li, M. Dvornicic, J.P. Soldo, J.Y. Kho, O.T. Ng, T. Barkham, B. Young, K. Marimuthu, K.R. Chng, M. Sikic, N. Nagarajan. [Hybrid metagenomic assembly enables high-resolution analysis of resistance determinants and mobile elements in human microbiomes](https://www.nature.com/articles/s41587-019-0191-2) (2019). Nature Biotechnology.
 
-##Talks and presentations
+## Talks and presentations
 
-1. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/2023_recomb_talk.pdf). (2023). RECOMB 2023, Istanbul.
+1. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul.
 
 
 
