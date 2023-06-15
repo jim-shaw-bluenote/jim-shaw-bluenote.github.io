@@ -13,6 +13,7 @@ header:
         - name: Research  # <-- whatever.md
         - name: Software # <-- whatever.md
         - name: Posts # <-- whatever.md
+        - name: CV # <-- whatever.md
 
 
 footer:
