@@ -4,7 +4,11 @@ title: Research Interests
 slug: /research
 ---
 
-I'm interested in a wide range of problems in computational genomics and data science from both a mathematical and applied point of view. Genomics problems that I'm particularly fond of include sequence alignment, haplotyping, and anything related to metagenomics.
+I'm interested in a wide range of problems in computational genomics from both a mathematical and applied point of view. My research interests can be broadly stratified into two categories:
+
+1. **Theory and algorithms for high-throughput sequence analysis** - I am interested in understanding *why* algorithms in bioinformatics work. Every method in our field uses heuristics instead of simply solving a well-defined computational model. These heuristics are necessary due to biology never respecting nice, solveable models, but explanations for why we use heuristics are sometimes not satisfying -- can we dive deeper into why these heuristics work? See my work on [k-mer selection methods](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btab790/6432031) and [average-case bounds on read alignment](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122.abstract) for examples.
+
+2. **High-performance software and practical method development in metagenomics** - I write fast and performant algorithms for metagenomics, the analysis of sequencing data from environmental samples. Terabyte-scale and petabyte-scale analysis of metagenomics data is common nowadays, and older methods can not scale to the capacity needed, necessitating newer, modern algorithms. I also care strongly about writing **useable and well-documented** software for bioinformaticians. Examples include my work on [sequence comparison algorithms](https://www.biorxiv.org/content/10.1101/2023.01.18.524587v1); see the Software tab for more information. 
 
 My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
