@@ -13,7 +13,7 @@ I'm interested in a wide range of problems in computational genomics from both a
 My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
 ## Pre-prints and published articles (in order of original pre-printing)
-1. Jim Shaw, Yun William Yu. [Fast and robust metagenomic sequence comparison through sparse chaining with skani](https://www.biorxiv.org/content/10.1101/2023.01.18.524587v1) (2023). bioRxiv.
+1. Jim Shaw, Yun William Yu. [Fast and robust metagenomic sequence comparison through sparse chaining with skani](https://www.biorxiv.org/content/10.1101/2023.01.18.524587v1) (2023). Nature Methods (accepted).
 2. Andrew Zheng, Jim Shaw, Yun William Yu. [Mora: abundance aware metagenomic read re-assignment for disentangling similar strains](https://www.biorxiv.org/content/10.1101/2022.10.18.512733v1) (2022). bioRxiv. 
 3. Jim Shaw, Yun William Yu. [Proving sequence aligners can guarantee accuracy in almost O(m log n) time through an average-case analysis of the seed-chain-extend heuristic](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122.abstract) (2023). Genome Research.  
 4. Martin Frith, Jim Shaw, John Spouge. [How to optimally sample a sequence for rapid analysis](https://doi.org/10.1093/bioinformatics/btad057) (2023). Bioinformatics.  
@@ -28,9 +28,6 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 1. [skani talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/2023ISMB_SKANI_TALK.pdf). (2023). ISMB 2023, Lyon.
 2. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul.
-
-
-
 
 
 
