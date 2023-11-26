@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Thoughts on metagenomic profiling. Part 1 - as a tool developer"
-date:   2022-11-30 
+date:   2023-11-30 
 categories: jekyll update
 ---
 
