@@ -15,7 +15,7 @@ The post is a combination of
 * Opinions for future profiler development choices
 * Pre-rebuttal to reviewers :) (just kidding, somewhat)
 
-To be honest, I'm not sure who my target audience is for this blog post. Tool developers may find it interesting. I think practitioners may also find the information useful for illuminating some weirdnessnes in profiler usage. Hopefully, you'll at least learn something about taxonomic profiling. 
+To be honest, I'm not sure who my target audience is for this blog post. Tool developers may find it interesting. I think practitioners may also find the information useful for illuminating why profilers are they way they are. Hopefully, you'll at least learn something about taxonomic profiling. 
 
 __Note: I am just some guy who developed a profiler and has some opinions. I’m not a microbiologist nor a definitive source. I’m open to feedback and opinions, especially if I say something wrong about your tool.__
 
