@@ -112,7 +112,7 @@ Profilers output their profiles in different formats, and it’s up to the user 
 
 Sequence classifiers, genome profilers, and taxonomic profilers are not exclusive; most methods do multiple things. As such, they will output different things. 
 
-For example, Kraken does all (1) and (3). Sylph does (2) and can incorporate taxonomic information downstream for (1). MetaPhlAn4 does (1), but algorithmically it’s more like (2) -- it [aligns reads to a species-level database of marker genes](https://forum.biobakery.org/t/origin-clade-specific-marker-genes/3806) (the “genomes”) and then sums up abundances.
+For example, Kraken does (1) and (3). Sylph does (2) and can incorporate taxonomic information downstream for (1). MetaPhlAn4 does (1), but algorithmically it’s more like (2) -- it [aligns reads to a species-level database of marker genes](https://forum.biobakery.org/t/origin-clade-specific-marker-genes/3806) (the “genomes”) and then sums up abundances.
 
 # We need a standardized taxonomic profiling output 
 
