@@ -27,8 +27,9 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 ## Talks and presentations
 
-1. [skani talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/2023ISMB_SKANI_TALK.pdf). (2023). ISMB 2023, Lyon.
-2. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul.
+1. [sylph talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/assets/sylph_talk.pdf). (2023). Genome Informatics 2023, Cold Spring Harbor Laboratory.
+2. [skani talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/2023ISMB_SKANI_TALK.pdf). (2023). ISMB 2023, Lyon.
+3. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul.
 
 
 
