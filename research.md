@@ -14,7 +14,7 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 ## Pre-prints and published articles (in order of original pre-printing)
 
-* indicates co-lead authors
+Asterisks indicates co-lead authors
 
 1. Jim Shaw*, Jean-Sebastien Gounot*, Hanrong Chen, Niranjan Nagarajan, Yun William Yu. [Floria: Fast and accurate strain haplotyping in metagenomes](https://www.biorxiv.org/content/10.1101/2024.01.28.577669v1) (2024). bioRxiv.
 2. Jim Shaw, Yun William Yu. [Metagenome profiling and containment estimation through abundance-corrected k-mer sketching with sylph](https://www.biorxiv.org/content/10.1101/2023.11.20.567879v1) (2023). bioRxiv.
