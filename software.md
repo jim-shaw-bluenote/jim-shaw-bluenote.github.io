@@ -19,3 +19,5 @@ Here's a list of software that I've been involved with creating, either directly
 ## Misc.
 - [c2-CW](https://github.com/bluenote-1577/c2invariant_cw_code) - calculation of c2 invariant for graphs appearing in phi4 theory.
 
+Trivia: my github name, [bluenote-1577](https://github.com/bluenote-1577), is the record number for an [album](https://bestofjazz.org/wp-content/uploads/John-Coltrane-Blue-Train.png). 
+
