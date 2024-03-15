@@ -1,10 +1,8 @@
 ---
 layout: work
-title: 
+title: Published articles and preprints (in order of original pre-printing)
 slug: /publications
 ---
-
-## Pre-prints and published articles (in order of original pre-printing)
 
 My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
