@@ -1,6 +1,6 @@
 ---
 layout: work
-title: Publications and talks
+title: 
 slug: /publications
 ---
 
