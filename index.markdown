@@ -9,7 +9,7 @@ Hi there! I'm Jim, a PhD student in the math department at the University of Tor
 </p>
 
 <p>
-I design novel computational methods that enable biological discovery from large genomics datasets. Biological data us is messy and formidable -- I find that a mathematical perspective and respect for the biology goes a long way in taming it. 
+I design novel computational methods that enable biological discovery from large genomics datasets. Biological data is messy and formidable, but I find that a mathematical perspective and respect for the biology goes a long way in taming it. 
 </p>
 
 <p>

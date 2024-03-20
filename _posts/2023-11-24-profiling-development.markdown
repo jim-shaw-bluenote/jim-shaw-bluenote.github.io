@@ -106,7 +106,7 @@ Profilers output their profiles in different formats, and it’s up to the user 
 
 1. __Taxonomic profiling__ is the quantification of taxa for a metagenomic sample. Taxonomic profiling, of course, requires a taxonomy. 
 
-2. I will define __genome profiling__ as the quantification of the genomes in a database. Note that genome profiling does not require a taxonomy, but genome profiles can be turned into a taxonomic profile by incorporating a taxonomy. 
+2. I will define __genome profiling__ (or metagenome profiling) as the quantification of the genomes in a database. Note that genome profiling does not require a taxonomy, but genome profiles can be turned into a taxonomic profile by incorporating a taxonomy. 
 
 3. Some methods are __sequence classifiers__. They classify each sequence (i.e. read) against a database and then use this for either taxonomic or genome quantification. The term **taxonomic binner** is used; I dislike the term because it gets confused with contig binning. 
 
@@ -127,7 +127,9 @@ I think these formats are reasonable, but here are some rudimentary thoughts.
 
 ### Conclusion
 
-Developing profilers is hard. The differences between methods on (1) database, (2) taxonomy, and (3) outputs make development and benchmarking difficult. I have a newfound respect for the people behind large standardized benchmarks, especially the folks behind CAMI for tackling these challenges. I think correctly handling all of the pitfalls in benchmarking and development is too challenging for someone who wants to create better algorithms. 
+Developing profilers is hard. The differences between methods on (1) database, (2) taxonomy, and (3) outputs make development and benchmarking difficult. I have a newfound respect for the people behind large standardized benchmarks, especially the folks behind CAMI for tackling these challenges. 
+
+I think correctly handling all of the pitfalls in benchmarking and development is too challenging for someone who wants to create better algorithms. 
 
 My ideal future as a tool developer?
 
