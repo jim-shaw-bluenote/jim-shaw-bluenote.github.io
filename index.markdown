@@ -9,7 +9,7 @@ Hi there! I'm Jim, a PhD student in the math department at the University of Tor
 </p>
 
 <p>
-I do research in computational genomics and bioinformatics. I like looking at computational problems involving genomic sequencing data from a mathematical perspective. I also try to develop high-performance software and methods for metagenomics. See the Research page for a more thorough description of my current and past interests. 
+I design novel computational methods that enable biological discovery from large genomics datasets. Biological data us is messy and formidable -- I find that a mathematical perspective and respect for the biology goes a long way in taming it. 
 </p>
 
 <p>
