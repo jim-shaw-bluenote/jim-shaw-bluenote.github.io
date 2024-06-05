@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://jim-shaw-bluenote.github.io//sitemap.xml
