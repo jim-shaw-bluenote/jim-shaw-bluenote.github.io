@@ -1,47 +1,26 @@
 ---
 layout: page
-permalink: /repositories/
-title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+permalink: /software/
+title: software
+description: 
 nav: true
 nav_order: 4
 ---
 
-## GitHub users
+Here's a list of software that I've been involved with creating, either directly (code I wrote) or indirectly (devised methods or supervised). 
 
-{% if site.data.repositories.github_users %}
+## Bioinformatics 
 
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.liquid username=user %}
-  {% endfor %}
-</div>
+- [fairy](https://github.com/bluenote-1577/fairy) - fast approximate coverage for metagenomic binning.
+- [sylph](https://github.com/bluenote-1577/sylph) - statistical ANI querying and profiling for metagenomic samples. 
+- [floria](https://github.com/bluenote-1577/floria) - microbial strain phasing by flow-based MEC haplotyping.
+- [skani](https://github.com/bluenote-1577/skani) - fast and robust ANI calculation by sparse k-mer chaining. 
+- [mora](https://github.com/AfZheng126/MORA) - strain-level read reassignment (written by [Andrew Zheng](https://github.com/AfZheng126)). 
+- [flopp](https://github.com/bluenote-1577/flopp) - fast polyploid haplotype phasing for long-read data. 
+- [OPERA-MS](https://github.com/CSB5/OPERA-MS) - hybrid metagenomic assembler for long and short-reads.
 
----
+## Misc.
+- [c2-CW](https://github.com/bluenote-1577/c2invariant_cw_code) - calculation of c2 invariant for graphs appearing in phi4 theory.
 
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-{% if site.data.repositories.github_users.size > 1 %}
+Trivia: my github name, [bluenote-1577](https://github.com/bluenote-1577), is the record number for an [album](https://bestofjazz.org/wp-content/uploads/John-Coltrane-Blue-Train.png). 
 
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.liquid username=user %}
-  </div>
-
----
-
-{% endfor %}
-{% endif %}
-{% endif %}
-
-## GitHub Repositories
-
-{% if site.data.repositories.github_repos %}
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.liquid repository=repo %}
-  {% endfor %}
-</div>
-{% endif %}
