@@ -10,7 +10,7 @@ In our (me and [Yun William Yu's](https://yunwilliamyu.net/content/)) new paper 
 1. A high-level exposition of the main ideas of the paper for people somewhat familiar with k-mers, alignment, and chaining. 
 2. An intuitive proof sketch of the runtime being close to $$O(m \log n).$$
 
-# Main motivation 
+### Main motivation 
 
 Optimal alignment in the theoretical worse case is difficult; it takes $$O(mn)$$ time for sequences of length $$n$$ and $$m$$ where $$m < n$$ using e.g. Needleman-Wunsch or Smith-Waterman. Real aligners don't just align reads or two genomes together using an $$O(mn)$$ algorithm but use heuristics instead. 
 
@@ -20,13 +20,13 @@ However, seed-chain-extend is still $$O(mn)$$ in the worst-case: consider two st
 
 Therefore, in order to break through the $$O(mn)$$ runtime barrier, we use average-case analysis instead. This means we take the expected runtime over all possible inputs under some probabilistic model on our inputs. The idea is that as long as the inputs are not of the form $$AAAAA...$$ _too often_ under our random model, we can still do better than $$O(mn)$$ on average. 
 
-# Random input model
+### Random input model
 
 To do average-case analysis, we need a random model on our inputs to take an expectation over. When we align sequences, we generally believe there is some similarity between them, so aligning two random strings isn't the correct model. We instead use an independent substitution model. We let $$S$$ be a random string, and $$S'$$ be a mutated substring of $$S$$ where we take a substring of $$S$$ and then mutate each character to a different letter with probability $$\theta$$. The length of $$S$$ is $$\sim n$$ and $$S'$$ is $$\sim m$$ where $$\sim$$ hides factors of $$k$$ lurking around; see Section 2 for clarification. 
 
 We don't model indels, but such independent substitution models have been used before to model k-mer statistics relatively well (e.g. mash). In my opinion, the much bigger issue is that repeats aren't correctly modeled; if someone wants to take a stab at modeling random mutating string models with repeats, let me know!
 
-# What did we prove?
+### What did we prove?
 
 There are three main things we prove in the paper. Remember, $$m < n$$ and $$\theta$$ is the mutation rate of our string. 
 
@@ -40,7 +40,7 @@ The chaining result (2) involves messing around with statistics of k-mers and th
 
 I think the extension result (1) is the most interesting, and the main idea behind the proof is relatively simple. I'll spend the rest of the blog talking about this result.
 
-# Core assumptions on seed-chain-extend
+### Core assumptions on seed-chain-extend
 
 I will spend the rest of this blog explaining the main idea behind result (1) above. 
 
@@ -52,7 +52,7 @@ In Section 2 of our paper, we go through our exact model seed-chain-extend. I'll
 4. k-mer anchors are _allowed to overlap_. If you're experienced with chaining, you know that allowing overlaps without explicitly accounting for overlaps in the cost may not model the chain properly. For us, however, it is mathematically convenient to allow overlaps.
 5. We perform _quadratic time extension_ between gaps in the resulting chain. We don't actually care about the cost (e.g. edit, affine, dual-affine, ...)  for this. 
 
-# How do we prove extension is fast?
+### How do we prove extension is fast?
 
 Intuitively, we just want to show that the gaps between anchors in the resulting chain are small and not plentiful. Remember that the resulting chain is now _random_ since our inputs are random. The optimal chain can be kind of weird, so we look at the longest _homologous_ chain, which I define below. 
 
@@ -66,7 +66,7 @@ We can always obtain a chain by just taking all blue, homologous anchors. Let's 
 
 The above claim takes quite a bit of work, but I think it's relatively believable. Intuitively, we pick $$k = C \log n$$ big enough such that spurious anchors don't happen too often. The homologous chain is much, much easier to work with than an arbitrary optimal chain, so our problem becomes much easier now. 
 
-# Modeling gaps between homologous k-mers
+### Modeling gaps between homologous k-mers
 
 The following sections are a high-level version of Appendix D.5 in our paper.
 
@@ -88,7 +88,7 @@ $$Y_1^2 + Y_2^2 + ... + Y_m^2 = G_1^2 + G_2^2 + ...$$
 
 We sum up to $$m$$ because there are $$m$$ homologous k-mers since $$ m < n $$. But now, the _number_ of $$Y_i$$s is no longer a random variable! So we can just take expectations and use linearity of expectation to get a result. 
 
-# Making k-mers independent as an upper bound.
+### Making k-mers independent as an upper bound.
 
 We're almost there, but not quite yet. We do a trick to upper bound $$Y_1^2 + ... + Y_m^2$$. The problem is that in conditions (1), (2), and (3) above, the k-mers are not independent. Precisely, the "k-mers between these two flanking k-mers" in (3) share bases with the flanking k-mers, so they're dependent under our mutation model. 
 
@@ -114,7 +114,7 @@ $$\text{Runtime} \leq O(\mathbb{E}[Y_1^2 + ... + Y_m^2]) \leq O(\mathbb{E}[(Y_1^
 
 Recall that $$m$$ is the size of $$S'$$ (modulo factors of $$k$$, which are small), the smaller string. Now we can see that all except for about $$m/k$$ of the $$Y_i^K$$ are always $$0$$ since there are only $$m/k$$ k-mers in $$K$$, so only $$m/k$$ of the random variables satisfy condition (1) above. 
 
-# Calculating expectation of $$(Y_i^K)^2$$.
+### Calculating expectation of $$(Y_i^K)^2$$.
 
 Let's compute $$\Pr(Y_i^K = x)$$. I claim that assuming the k-mer at $$i$$ is in $$K$$, 
 
@@ -144,7 +144,7 @@ $$ = O \bigg (m \log n (1 - \theta)^{-C \log n} \bigg) = O\bigg( m \log n n^{-C 
 
 where $$-C \log (1 - \theta) = f (\theta)$$, and we're done. In the paper, we take $$C \sim \frac{2}{1 + 2 \log(1-\theta)}$$ for reasons relating to the accuracy result, so $$C$$ actually depends on $$\theta$$ as well. 
 
-# Conclusion
+### Conclusion
 
 We showed that the runtime of extending through the gaps in the homologous chain of k-mers is $$O(m n^{f(\theta)} \log n )$$, which is almost $$O(m \log n)$$ when $$\theta$$ is small. For example, we can explicit calculate $$f(0.05) < 0.08$$ when $$\theta$$ is $$0.05$$, so the runtime in this case this is $$O(m n^{0.08} \log n)$$.  $$n^{0.08}$$ is actually smaller than $$\log n$$ when $$n < 10^{21}$$, so it's really, really small for realistic $$n$$. 
 

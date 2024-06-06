@@ -18,7 +18,7 @@ To be honest, I'm not sure who my target audience is for this blog post. Tool de
 
 _Note: I am a computational biologist with some opinions. In particular, I’m not a microbiologist nor a definitive source. I’m open to feedback and opinions, especially if I say something wrong about your tool._
 
-### Problem 1 - NCBI resource usability for metagenomics
+## Problem 1 - NCBI resource usability for metagenomic databases
 
 Here is my understanding of some fundamental aspects of (prokaryotic) databases.   
 
@@ -32,13 +32,13 @@ The default database offered by many profilers, such as [Kraken](https://genomeb
 
 I first want to recognize the amazing work done by the creators of the RefSeq and the NCBI taxonomies. They are invaluable resources. However, I have a few grievances _from a purely metagenomic profiling perspective_. 
 
-# Lack of RefSeq database standardization across tools
+### Lack of RefSeq database standardization across tools
 
 There is no actual "the RefSeq profiling database". There are options: are genomes  _complete_ or _scaffold-level_? Are prokaryotic genomes _representative or reference_? Should viral/eukaryotes be included? 
 
 The lack of standardization is hampered by RefSeq having a continuous release structure as well as a discrete release structure. In many situations, the continuous release is used. For example, the CAMI datasets use a January 8, 2019 RefSeq+Taxonomy snapshot. This is a problem for benchmarking across different versions (discussed later). 
 
-# Parsing NCBI taxonomy is rife with pitfalls
+### Parsing NCBI taxonomy is rife with pitfalls
 
 This is a major grievance I have. The taxonomy that the NCBI provides is _difficult to parse_. Here are the basic steps:
 
@@ -50,11 +50,11 @@ The documentation for parsing taxonomy files, getting accession2taxid, etc are s
 
 **Why should a user care?** Have you ever tried to add new taxonomic nodes to a Kraken database? [Not so forgiving]( https://github.com/DerrickWood/kraken2/issues/436). This isn’t the Kraken developers’ fault, it’s because they had to make it concordant with the NCBI taxonomy, which was never really meant to be used for creating profiling databases. 
 
-### Problem 2 - Benchmarking against other tools and taxonomies is hard
+## Problem 2 - Benchmarking against other tools and taxonomies is hard
 
 A large part of developing a profiler comes down to benchmarking (anywhere from 20-50% of the time). I feel that benchmarking profilers is extremely difficult due to _database choice_. This will be a constant theme for the following points. 
 
-# Poor synthetic metagenome construction is easy and causes distrust
+### Poor synthetic metagenome construction is easy and causes distrust
 
 I've seen numerous studies that have constructed synthetic metagenomes and claimed results that don't seem to match real metagenomes. Some common pitfalls:
 
@@ -66,7 +66,7 @@ Some benchmark studies claim near-perfect accuracy for many tools, whereas other
 
 For me, this has created distrust of custom synthetic benchmarks. I find myself glazing over custom benchmarks and just looking at CAMI results... but this is not a good thing for the field. While standardized datasets are great, they must lack _some_ aspect of a real metagenome. Also, methods will inevitably overfit to them.
 
-# How do you choose a database when comparing methods?
+### How do you choose a database when comparing methods?
 
 mOTUs and MetaPhlAn use the NCBI taxonomy, but they use a fixed version since their database is not customizable. mOTUs3 [seems to use the 8 January 2019](https://github.com/motu-tool/mOTUs/issues/85) for concordance with CAMI, probably, and I believe MetaPhlAn4 [depends on the exact version used](https://forum.biobakery.org/t/which-ncbi-taxdump-version-used-for-metaphlan4-database/4989), but not the 8 Jan 2019 version. 
 
@@ -87,7 +87,7 @@ But **(A)** is an issue due to the following:
 
 Option **(C)** suffers from the first problem above, but not the second. 
 
-# Benchmarking becomes a headache
+### Benchmarking becomes a headache
 
 What’s a good solution? To be honest, I don’t know. Some thoughts:
 
@@ -98,11 +98,11 @@ What’s a good solution? To be honest, I don’t know. Some thoughts:
 
 I am now cautious when I interpret results between MetaPhlAn/mOTUs and non-marker gene methods. Many of the studies that I’ve read seem to lack information about how cross-taxonomy results were obtained. The study [here](https://www.frontiersin.org/articles/10.3389/fmicb.2021.643682/full) by Parks et al. is an exception and did a really great job of outlining its benchmarking procedure. 
 
-### Problem 3 -  Standardizing taxonomic profiling outputs
+## Problem 3 -  Standardizing taxonomic profiling outputs
 
 Profilers output their profiles in different formats, and it’s up to the user to standardize them. This is annoying for users, but also for developers. I’ll discuss why I think this situation ended up happening. 
 
-# Methods do different things
+### Methods do different things
 
 1. __Taxonomic profiling__ is the quantification of taxa for a metagenomic sample. Taxonomic profiling, of course, requires a taxonomy. 
 
@@ -114,7 +114,7 @@ Sequence classifiers, genome profilers, and taxonomic profilers are not exclusiv
 
 For example, Kraken does (1) and (3). Sylph does (2) and can incorporate taxonomic information downstream for (1). MetaPhlAn4 does (1), but algorithmically it’s more like (2) -- it [aligns reads to a species-level database of marker genes](https://forum.biobakery.org/t/origin-clade-specific-marker-genes/3806) (the “genomes”) and then sums up abundances.
 
-# We need a standardized taxonomic profiling output 
+### We need a standardized taxonomic profiling output 
 
 Standardizing sequence classifiers and genome profiling is out of scope, but we can at least attempt to standardize __taxonomic profiling__ outputs. The [CAMI format for taxonomic profiling](https://github.com/CAMI-challenge/contest_information/blob/master/file_formats/CAMI_TP_specification.mkd) is a possible choice, but it is not the standard for Kraken or MetaPhlAn.  MetaPhlAn has its own output, which is similar. 
 
@@ -125,7 +125,7 @@ I think these formats are reasonable, but here are some rudimentary thoughts.
 * We should really be attaching some sort of confidence score to each classification. Think about how useful MAPQs are in read mapping. 
 * We should record the exact taxonomies (i.e. versions) used. Taxonomic profiles and taxonomy are intertwined. 
 
-### Conclusion
+## Conclusion
 
 Developing profilers is hard. The differences between methods on (1) database, (2) taxonomy, and (3) outputs make development and benchmarking difficult. I have a newfound respect for the people behind large standardized benchmarks, especially the folks behind CAMI for tackling these challenges. 
 
@@ -137,7 +137,7 @@ My ideal future as a tool developer?
 2. We can extend each database by simply dropping in a fasta file and adding a new line in the taxonomy file. 
 3. Let’s allow each tool to use one of these standardized databases and output standardized taxonomic profiles, making benchmarking and cross-profile comparison easy. This allows practitioners to try different databases easily too. 
 
-# Example taxonomy format solution
+### Example taxonomy format solution
 Here is a simple format: store a correspondence between each genome file/sequence and a string in a two-column TSV file:
 
 Genome_file	Tax_string
