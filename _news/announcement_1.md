@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Changed my website layout.
+Location update! I'll be in the Toronto area from mid-June to August. I will be in Boston from September onwards.

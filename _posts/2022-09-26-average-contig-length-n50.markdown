@@ -5,7 +5,7 @@ date:   2022-09-26
 categories: jekyll update
 ---
 
-# Probabilistic setup of sequence assembly outputs
+### Probabilistic setup of sequence assembly outputs
 
 When one analyzes sequence assemblies, a mysterious definition they inevitably encounter is the N50. N50 is commonly defined as the size $$L$$ of the smallest contig such that summing all contigs of size $$\geq L$$ gives at least half of the total sequence assembly length. The reason for using N50 intuitively is that we don't want small contigs, of which there may be many, to skew the average contig length. See [here](http://www.acgt.me/blog/2013/7/8/why-is-n50-used-as-an-assembly-metric.html) or the [Wikipedia article](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics) for more info. 
 
@@ -21,7 +21,7 @@ I chose an exponential distribution because contig lengths tend to have a heavy 
 
 Under our probabilistic setup, the average length of the contigs is $$\mathbb{E}[x_i] = \lambda$$, but _can we calculate what the N50 is analytically?_
 
-# Defining N50 probabilistically
+### Defining N50 probabilistically
 
 First, let's define the _empirical N50_ rigorously.
 
@@ -53,7 +53,7 @@ This is the reason behind the definition, and suggests that $$\hat{N_{50}} \righ
 
 I haven't tried too hard to prove that $$\hat{N_{50}} \rightarrow N_{50}$$ as n gets large. The proof should probably be similar to the [proof that the empirical median converges to the true median](https://stats.stackexchange.com/questions/72023/convergence-in-probability-of-empirical-median). In my simulations, it seems to be the case that $$\mathbb{E}[\hat{N_{50}}] \rightarrow N_{50}$$, so let's just assume that these quantities are related for the rest of the post. Maybe someone else can take a stab at it; let me know how it goes! 
 
-# Calculating the N50
+### Calculating the N50
 
 Let's define $$\sigma = N_{50}$$ for the rest of the post, for ease of notation. We can actually calculate the N50 as follows. Because $$\sigma$$ is a constant, $$x_i \mathbb{1}_{x_i \geq \sigma}$$ are identically distributed. Thus to find the N50, we just have to solve the equation
 
@@ -92,7 +92,7 @@ It seems that this value $$1.6783469...$$ appears elsewhere in statistical theor
 So under our exponential model, along with our numerous assumptions, the N50 and the average contig length is always related just by a constant multiple, no matter what the average length is. 
 
 
-# Does this actually work in practice?
+### Does this actually work in practice?
 
 To apply this theory, we can't look at genomes that have been meticulously refined, as they no longer have exponentially distributed contig lengths.
 
