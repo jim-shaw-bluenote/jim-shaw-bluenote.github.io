@@ -12,9 +12,10 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 \* indicates co-lead authors
 
-1. **Jim Shaw**, Yun William Yu. [Fairy: fast approximate coverage for multi-sample metagenomic binning](https://www.biorxiv.org/content/10.1101/2024.04.23.590803v1) (2024). bioRxiv. 
+1. Brian Zhang, Grace Oualline, **Jim Shaw**, Yun William Yu. [skandiver: a divergence-based analysis tool for identifying intercellular mobile genetic elements](https://arxiv.org/abs/2406.12064) (2024). ECCB/Bioinformatics (accepted). 
+1. **Jim Shaw**, Yun William Yu. [Fairy: fast approximate coverage for multi-sample metagenomic binning](https://www.biorxiv.org/content/10.1101/2024.04.23.590803v1) (2024). Accepted-in-principle. 
 1. **Jim Shaw**\*, Jean-Sebastien Gounot\*, Hanrong Chen, Niranjan Nagarajan, Yun William Yu. [Floria: Fast and accurate strain haplotyping in metagenomes](https://www.biorxiv.org/content/10.1101/2024.01.28.577669v1) (2024). ISMB/Bioinformatics (accepted).
-2. **Jim Shaw**, Yun William Yu. [Metagenome profiling and containment estimation through abundance-corrected k-mer sketching with sylph](https://www.biorxiv.org/content/10.1101/2023.11.20.567879v1) (2023). bioRxiv.
+2. **Jim Shaw**, Yun William Yu. [Metagenome profiling and containment estimation through abundance-corrected k-mer sketching with sylph](https://www.biorxiv.org/content/10.1101/2023.11.20.567879v1) (2023). Accepted-in-principle.
 3. **Jim Shaw**, Yun William Yu. [Fast and robust metagenomic sequence comparison through sparse chaining with skani](https://doi.org/10.1038/s41592-023-02018-3) (2023). Nature Methods.
 4. Andrew Zheng, **Jim Shaw**, Yun William Yu. [Mora: abundance aware metagenomic read re-assignment for disentangling similar strains](https://doi.org/10.1186/s12859-024-05768-9) (2024). BMC Bioinformatics. 
 5. **Jim Shaw**, Yun William Yu. [Proving sequence aligners can guarantee accuracy in almost O(m log n) time through an average-case analysis of the seed-chain-extend heuristic](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122.abstract) (2023). Genome Research.  
