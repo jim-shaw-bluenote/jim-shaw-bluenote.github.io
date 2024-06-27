@@ -15,15 +15,16 @@ social: false # includes social icons at the bottom of the page
 ---
 
 <p>
-Hi there! I'm Jim, a PhD student in the math department at the University of Toronto. I work in <a href="https://yunwilliamyu.net/content/">Prof. Yun William Yu's</a> lab. 
+Hi there! I'm Jim. I recently defended my PhD in Math at the University of Toronto, advised by <a href="https://yunwilliamyu.net/content/">Yun William Yu</a>. I will be a postdoctoral fellow starting in September 2024, working with <a href="https://hlilab.github.io/">Heng Li</a> at Harvard Medical School and Dana Farber Cancer Institute. 
 </p>
 
 ## Research interests
 
-<!---My research centers on building computational methods to extract *robust* signals from large genomics datasets *quickly*, with the ultimate goal of accelerating fundamental genomics research.
---->
+<!------>
 
-I develop algorithms/tools/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis) of large genomics datasets. My applied interests lean towards the study of microbiomes, e.g., [microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [metagenome profiling](https://www.biorxiv.org/content/10.1101/2023.11.20.567879v2), and [strain resolution](https://www.biorxiv.org/content/10.1101/2024.01.28.577669v1), but I'm broadly interested in important genomics problems. 
+I develop algorithms/tools/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis) of large genomics datasets. My research centers on building computational methods to extract *robust* signals from large biological datasets *quickly*, with the goal of accelerating fundamental genomics research.
+
+My applied interests lean towards the study of microbiomes, e.g., [microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [metagenome profiling](https://www.biorxiv.org/content/10.1101/2023.11.20.567879v2), and [strain resolution](https://www.biorxiv.org/content/10.1101/2024.01.28.577669v1), but I'm broadly interested in important genomics problems. 
 
 Exact techniques used include a mix of engineering, data science, and algorithms; [new mathematical theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122) is developed when appropriate. I particularly like the "full-stack" process of bioinformatics development, going from pure theory + biology to widely-adopted software. 
 
