@@ -29,8 +29,9 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 ## Talks and presentations
 
-1. [sylph talk v2](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/GLBIO-TalkJimShaw.pdf). (2024). Great Lakes Bioinformatics 2024, Pittsburgh.
-2. [sylph talk v1](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/sylph_talk.pdf). (2023). Genome Informatics 2023, Cold Spring Harbor Laboratory.
-3. [skani talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/2023ISMB_SKANI_TALK.pdf). (2023). ISMB 2023, Lyon.
-4. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul.
+1. [Floria talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/ISMB2024-Floria-JimShaw.pdf). (2024). ISMB 2024, Montreal.
+2. [sylph talk v2](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/GLBIO-TalkJimShaw.pdf). (2024). Great Lakes Bioinformatics 2024, Pittsburgh.
+3. [sylph talk v1](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/sylph_talk.pdf). (2023). Genome Informatics 2023, Cold Spring Harbor Laboratory.
+4. [skani talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/2023ISMB_SKANI_TALK.pdf). (2023). ISMB 2023, Lyon.
+5. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul.
 
