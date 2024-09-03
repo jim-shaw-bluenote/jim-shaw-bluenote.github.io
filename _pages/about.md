@@ -15,11 +15,11 @@ social: false # includes social icons at the bottom of the page
 ---
 
 <p>
-Hi there! I'm Jim. 
+Hi there! I am a postdoctoral fellow at Harvard Medical School and Dana-Farber Cancer Institute. I work with <a href="https://hlilab.github.io/">Heng Li</a>.
+</p>
 
-I am a postdoctoral fellow at Harvard Medical School and Dana-Farber Cancer Institute. I work with <a href="https://hlilab.github.io/">Heng Li</a>  
-
-I recently got my PhD in Math at the University of Toronto, advised by <a href="https://yunwilliamyu.net/content/">Yun William Yu</a>. Previously, I studied Engineering Physics at the University of British Columbia. 
+<p>
+I recently got my PhD in Math at the University of Toronto, advised by <a href="https://yunwilliamyu.net/content/">Yun William Yu</a>. Previously, I studied Engineering Physics + Mathematics at the University of British Columbia. 
 </p>
 
 ## Research interests
