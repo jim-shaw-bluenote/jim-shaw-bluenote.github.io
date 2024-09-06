@@ -12,7 +12,7 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 \* indicates co-lead authors
 
-1. Brian Zhang, Grace Oualline, **Jim Shaw**, Yun William Yu. [skandiver: a divergence-based analysis tool for identifying intercellular mobile genetic elements](https://arxiv.org/abs/2406.12064) (2024). ECCB/Bioinformatics (accepted). 
+1. Brian Zhang, Grace Oualline, **Jim Shaw**, Yun William Yu. [skandiver: a divergence-based analysis tool for identifying intercellular mobile genetic elements](https://academic.oup.com/bioinformatics/article/40/Supplement_2/ii155/7749064) (2024). ECCB/Bioinformatics. 
 1. **Jim Shaw**, Yun William Yu. [Fairy: fast approximate coverage for multi-sample metagenomic binning](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-024-01861-6) (2024). Microbiome. 
 1. **Jim Shaw**\*, Jean-Sebastien Gounot\*, Hanrong Chen, Niranjan Nagarajan, Yun William Yu. [Floria: Fast and accurate strain haplotyping in metagenomes](https://doi.org/10.1093/bioinformatics/btae252) (2024). ISMB/Bioinformatics.
 2. **Jim Shaw**, Yun William Yu. [Metagenome profiling and containment estimation through abundance-corrected k-mer sketching with sylph](https://www.biorxiv.org/content/10.1101/2023.11.20.567879v1) (2023). Accepted to Nature Biotechnology.
