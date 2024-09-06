@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Jim Shaw",
-    "label": "PhD student (incoming Postdoctoral Fellow)",
+    "label": "Postdoctoral Fellow",
     "image": "",
     "location": {
       "address": "2712 Broadway St",
@@ -22,7 +22,7 @@
     {
       "institution": "Dana-Farber Cancer Institute and Harvard Medical School",
       "location": "Boston, U.S.",
-      "studyType": "Postdoctoral Fellow (incoming)",
+      "studyType": "Postdoctoral Fellow",
       "startDate": "2024",
       "endDate": "-",
       "area": "Advised by Prof. Heng Li"

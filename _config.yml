@@ -5,7 +5,7 @@
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Jim 
 last_name: Shaw
-email: jshaw@math.toronto.edu
+email: jshaw@ds.dfci.harvard.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Jim Shaw's academic website. 
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
