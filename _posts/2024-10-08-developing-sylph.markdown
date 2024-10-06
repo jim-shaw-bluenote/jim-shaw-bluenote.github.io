@@ -5,7 +5,7 @@ date:   2024-10-08
 categories: jekyll update
 ---
 
-In this blog post, I will talk about the process of developing [sylph](https://github.com/bluenote-1577/sylph), a bioinformatics tool we (me and my advisor, [William](https://yunwilliamyu.net/content/)) developed. 
+In this blog post, I will talk about the process of developing [sylph](https://github.com/bluenote-1577/sylph), a bioinformatics tool we (me and my advisor, [William](https://yunwilliamyu.net/content/)) developed. Sylph is now published in _Nature Biotechnology_.
 
 I've always found the inner workings of research interesting. This is my contribution. My goal is to demystify tool development in bioinformatics a bit. 
 
@@ -37,19 +37,19 @@ Naturally, I went to [a familiar paper on k-mer statistics](https://doi.org/10.1
 
 I remember skimming through the paper, and while I didn't read through the math at the time, I understood the basic idea: **low-coverage sequencing creates problems for k-mers**. It seemed like a great paper, but I didn't think more about it at the time. 
 
-Back to late 2022, I had my fast fast-metagenomic-k-mer-sketcher pretty much completed. While I was messing around with it, I ran into the following problem.
+Back to late 2022, I had my fast metagenomic-k-mer-sketcher pretty much completed, but I ran into the following problem.
 
 ##### The low-abundance problem (technical; can skip)
 
 ----
-Suppose a genome (in some database) **only shared a small fraction of its k-mers with a metagenome**, this could 
+Suppose a genome (in some database) **only shared a small fraction of its k-mers with a metagenome sample**, this could 
 
 * be due to low sequencing depth in the metagenome (k-mers are not sequenced)
 
 **OR** 
-* because the k-mers are spurious matches that arise infrequently from a related but different species.
+* be due to spurious k-mer matches that arise from a different species.
 
-I wanted to compute the **containment average nucleotide identity** (ANI) accurately by using k-mers. This generalizes genome-genome ANI to _genome-metagenome_ ANI. And while there are methods for calculating ANI from k-mers, this issue obfuscates ANI calculation from k-mers.
+I wanted to compute the **containment average nucleotide identity** (ANI) accurately by using k-mers. This generalizes genome-genome ANI to _genome-metagenome_ ANI. And while there are methods for calculating this containment ANI from k-mers, sequencing depth becomes an issue. 
 
 ----
 
@@ -60,13 +60,13 @@ So during 2022/2023, around the new year, I spent a few nights at my local McDon
 #### Part 3 - Not knowing what to do for 5 months (2022 Dec - 2023 Apr)
 ------------
 
-The statistical model for sylph was completed in early 2023. I was busy with reviews, conferences, and other projects, but I also had no idea what to do with sylph. **I hadn't figured out how to make it a taxonomic profiler yet.** Let me explain the problem.
+The statistical model for sylph was completed in early 2023, but I had no idea what to do with sylph. **I hadn't figured out how to make it a taxonomic profiler yet.** Let me explain the problem.
 
 ##### The abundance estimation problem (technical; can skip)
 ----
 If you want the abundance of some organism in your metagenomic sample, most profilers do two steps: (1) classify reads against reference genomes and then (2) count the proportion of reads assigned to each genome.
 
-However, if you have two very similar E. coli genomes in your database and an E. coli read, its assignment is ambiguous. How do profilers deal with this? Well, [Kraken](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0) uses a taxonomy to say "these E. coli _strains_ are from the same _species_, so just assign the read to the E. coli _species_". All profilers have some way of dealing with this issue.
+However, if you have (1) two very similar E. coli genomes in your database and (2) an E. coli read, the read's classification is ambiguous at the strain level. How do profilers deal with this? Well, [Kraken](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0) uses a taxonomy to say "these E. coli _strains_ are from the same _species_, so just assign the read to the E. coli _species_". All profilers have some way of dealing with this issue.
 
 I had no way of dealing with this issue (even for "dereplicated" databases) since sylph doesn't map reads -- it just checks for k-mers, of which many can be shared between different species. At this time, sylph's profiling didn't work well at all. 
 
@@ -74,16 +74,12 @@ I had no way of dealing with this issue (even for "dereplicated" databases) sinc
 
 **Back to sylph**: In summary, I had a method that can only check if a genome is contained in a sample (quickly and more accurately than other methods), but **not compute the abundance of the organism** (i.e., do _profiling_).
 
-Funnily enough, I didn't try hard to tackle this issue. For some reason, I just accepted that this was not the "right" problem to solve for sylph -- could I really do something better than all of the profilers out there? 
+Funnily enough, I didn't try hard to tackle this issue. For some reason, I just accepted that this was not the "right" problem to solve for sylph. During this time, I had a few other ideas that didn't pan out. Pulling up an old notebook, I see words such as "k-mer EM algorithm strain resolution" or "optimized sub-linear k-mer indexing"...
 
-During this time, I had a few other ideas that didn't pan out. Pulling up an old notebook, I see words such as "k-mer EM algorithm strain resolution" or "optimized sub-linear k-mer indexing"...
-
-#### Part 4 - Try to build around an incomplete algorithm(2023 Apr - 2023 Aug)
+#### Part 4 - Try to build around an incomplete algorithm (2023 Apr - 2023 Aug)
 ------------
 
-Eventually, in April/May of 2023, I settled on just presenting sylph but without the ability to estimate the abundances of organisms. 
-
-By July/August 2023, I wrote a brief communication (~3 pages) based on sylph's statistical model and showed it could be used for quickly detecting low-coverage genomes, strains of interest, etc. 
+Eventually, in April/May of 2023, I settled on just presenting sylph, but without the ability to estimate the abundances of organisms. And by July/August 2023, I wrote a brief communication (~3 pages) based on sylph's statistical model and showed it could be used for quickly detecting low-coverage genomes, strains of interest, etc. 
 
 While preparing for manuscript submission, we worked a lot on figuring out how to present the paper. This was rather difficult given that people often only care about abundances, not the "containment ANI" capabilities sylph had. 
 
@@ -104,11 +100,11 @@ To the best of my knowledge, this heuristic is mentioned online (since 2017) but
 
 **Trying the heuristic out:** I didn't believe this simple heuristic would work, but I decided to give it a try. It took less than an hour to implement, and it worked surprisingly well. I hit pause on the submission. Comparatively, the statistical model is a more interesting and important contribution, but this was the breakthrough... surprisingly.
 
-So I finally had a profiler in August 2023, but I did _not_ want to do the benchmarking necessary for developing a profiler. Benchmarking is much less fun than developing new methods. Unfortunately, the project seemed to have potential. 
+I finally had the capabilities to estimate organism abundance in August 2023, but I _did not_ want to do the benchmarking necessary for a paper. Benchmarking is much less fun than developing new methods. Unfortunately, the project seemed to have potential. 
 
 In September 2023, I went to Tokyo to visit [Martin Frith](https://sites.google.com/site/mcfrith/) for three months. During these three months, all sylph-related work consisted of benchmarking sylph's new profiling abilities, creating figures, and rewriting the paper. Recall that it took only 1 hour to implement the winner-take-all heuristic... 
 
-Luckily, sylph worked well. _Why_ does it work well? Perhaps this is the subject of a talk or another post. Anyways, by late November 2023, I started applying for academic jobs. The benchmarks seemed okay, the paper was tight enough, so we decided to get sylph out as a preprint. 
+Luckily, sylph worked well. _Why_ does it work well? Perhaps this is the subject of a talk or another post. Anyways, by late November 2023, I started applying for academic jobs. The benchmarks seemed okay; the paper was tight enough, so we decided to get sylph out as a preprint. 
 
 #### Part 6 - Bad results on real reads? (2023 Dec)
 ------------
@@ -117,16 +113,18 @@ In December 2023, Florian Plaza Oñate came to me with [a bug report](https://gi
 
 As any bioinformatics tool developer knows, your algorithms always perform worse on real data than benchmark data. There will be _some_ aspect of someone's data that violates your method's assumptions. However, the data Florian showed me seemed fishy enough that it wasn't just due to a small biological violation of the model... it seemed systemetically off. 
 
-A key component of sylph's model is a *stochastic uniformity assumption* for read sequencing. After thinking for a while, I knew this had to be the issue. However, it was not clear if this was an inherent issue with the model, or a technological issue. An inherent issue can't be fixed, but maybe a technological issue could be. 
+A key component of sylph's model is a *stochastic uniformity assumption* for read sequencing. After thinking for a while, I knew this had to be the issue. However, it was not clear if this was an inherent issue with the model, or a technological issue. 
 
 An unwritten law in bioinformatics is that if you're not sure what's happening, you visualize it in the [IGV](https://igv.org/doc/desktop/). So I manually inspected read alignments, and I found way more duplicated sequences than I expected. It turned out that **PCR duplicates were messing up sylph's statistical model**. Did you know that many Illumina sequencing runs can have > 30% of reads being PCR duplicates? I did not. 
 
-After discovering this issue, I came up with a simple locality-sensitive hashing algorithm for removing PCR duplicates. This seemed to work okay, but I had to rerun a few of my results. This led to an important update and a preprint revision. This was completed in January 2024. Special thanks to Florian for pointing this issue out. 
+After discovering this issue, I came up with a simple locality-sensitive hashing algorithm for removing PCR duplicates. This seemed to work okay, but I had to rerun a few of my results. This led to an important update and a preprint revision; the revision was also motivated due to people being mad at me for not benchmarking against the latest version of MetaPhlAn :) (lesson learned). This was completed in January 2024. 
 
 #### Concluding thoughts (2024, now)
 ------------
 
-I'm pleasantly surprised at sylph's reception so far. I've had people tell me personally/on social media that they've found sylph useful. Regardless of the journal we got into, as a tool developer, I've already been very happy with the outcome. Recently, I'm thrilled that sylph has been used for profiling **~2 million sequencing runs** in [Hunt et al.](https://www.biorxiv.org/content/10.1101/2024.03.08.584059v1). Recently, apparently Oxford Nanopore Technologies found that [sylph was the best method on their long reads](https://a.storyblok.com/f/196663/x/3cff79e4ec/microbeconference_20240502-1333.pdf) as well. 
+I'm pleasantly surprised at sylph's reception so far. I've had people tell me personally/on social media that they've found sylph useful. Regardless of the journal we got into, as a tool developer, I've already been very happy with the outcome. 
+
+Recently, I'm thrilled that sylph has been used for profiling **~2 million sequencing runs** in [Hunt et al.](https://www.biorxiv.org/content/10.1101/2024.03.08.584059v1). Also, apparently Oxford Nanopore Technologies found that [sylph was the best method on their long reads](https://a.storyblok.com/f/196663/x/3cff79e4ec/microbeconference_20240502-1333.pdf) as well (see Fig. 3). 
 
 #### Concluding opinions, thoughts, and notes on development 
 ------------
@@ -149,4 +147,3 @@ These time proportions depend on the project. For comparison, sylph's algorithm 
 **Benchmarking taxonomic profilers is hard**. I already [wrote a post about benchmarking taxonomic profilers](https://jim-shaw-bluenote.github.io/blog/2023/profiling-development/). Taxonomic profilers are especially bad because database construction is not intuitive and time consuming. 
 
 **The end**: hopefully this was informative. Feel free to let me know if you have any complaints. 
-
