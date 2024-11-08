@@ -11,6 +11,7 @@ Here's a list of software that I've been involved with creating, either directly
 
 ## Bioinformatics 
 
+- [devider](https://github.com/bluenote-1577/devider) - long-read haplotypes for highly-heterogenous sequencing mixtures. 
 - [fairy](https://github.com/bluenote-1577/fairy) - fast approximate coverage for metagenomic binning.
 - [sylph](https://github.com/bluenote-1577/sylph) - statistical ANI querying and profiling for metagenomic samples. 
 - [floria](https://github.com/bluenote-1577/floria) - microbial strain phasing by flow-based MEC haplotyping.
