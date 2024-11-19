@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Developing sylph - a look into bioinformatics tool development"
-date:   2024-10-08 
+date:   2024-11-18 
 categories: jekyll update
 ---
 
