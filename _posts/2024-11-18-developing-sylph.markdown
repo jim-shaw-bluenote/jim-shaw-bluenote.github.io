@@ -11,7 +11,7 @@ I've always found the inner workings of research interesting. This is my contrib
 
 #### Prelude: what is sylph?
 
-Sylph is a new method/software that detects what organisms are present in a [metagenomic DNA sequencing](https://www.nature.com/articles/nbt.3935) sample of a microbiome. This is sometimes called taxonomic or metagenomic *profiling*. A metagenomic sequencing produces small DNA fragments of the genomes within a microbiome (e.g. in your gut). 
+Sylph is a new method/software that detects what organisms are present in a [metagenomic DNA sequencing](https://www.nature.com/articles/nbt.3935) sample of a microbiome. This is sometimes called taxonomic or metagenomic *profiling*. 
 
 This post won't be about the sylph algorithm, but about its development process. I'll assume some familiarity with computational metagenomics going forward, but it's not strictly necessary. 
 
@@ -24,14 +24,14 @@ If you're unfamiliar with Mash, it's simply a method for calculating the similar
 
 The Mash algorithm is simple but powerful. It has tremendously influenced how I feel bioinformatics tools should be: __fast, easy to use, and accurate enough for generating biological hypotheses__. 
 
-**Sylph started from a simple curiosity:** when writing [a genome-to-genome calculation tool](https://www.nature.com/articles/s41592-023-02018-3) in 2022, I noticed that I could create k-mer sketches faster than Mash. This was done by adapting the k-mer processing routines from [minimap2](https://github.com/lh3/minimap2) and learning how to use SIMD instructions to speed stuff up. I thought it would be fun to write a stripped-down, faster k-mer sketching tool for personal use---I didn't think about publishing at this point. This was built relatively quickly while I was zoning out at a mathematics conference that I attended back home in Vancouver. 
+**Sylph started from a simple curiosity:** when writing [a genome-to-genome calculation tool](https://www.nature.com/articles/s41592-023-02018-3) in 2022, I noticed that I could create k-mer sketches faster than Mash. This was done by adapting the k-mer processing routines from [minimap2](https://github.com/lh3/minimap2) and learning how to use SIMD instructions to speed stuff up. 
+
+I thought it would be fun to write a stripped-down, faster k-mer sketching tool for personal use---I didn't think about publishing at this point. This was built relatively quickly while I was zoning out at a mathematics conference that I attended back home in Vancouver. 
 
 #### Part 2 - Stumbling across Skmer from Sarmashghi et al. (mid-late 2022)
 ------------
 
-Prior to even starting sylph, I was writing a paper about [sequence alignment theory](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122) in mid-2022. I wanted to justify the usage of a particular statistical model of k-mer statistics.
-
-Naturally, I went to [a familiar paper on k-mer statistics](https://doi.org/10.1089/cmb.2021.0431) by Blanca et al. to see what they cited, finding the paper ["Skmer: assembly-free and alignment-free sample identification using genome skims"](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1632-4) by Sarmashghi et al. 
+Prior to even starting sylph, I was writing a paper about [sequence alignment theory](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122) in mid-2022. I wanted to justify the usage of a particular statistical model of k-mer statistics. I went to [a familiar paper on k-mer statistics](https://doi.org/10.1089/cmb.2021.0431) by Blanca et al. to see what they cited, finding the paper ["Skmer: assembly-free and alignment-free sample identification using genome skims"](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1632-4) by Sarmashghi et al. 
 
 I remember skimming through this paper, and while I didn't read through the math at the time, I understood the basic idea: **low-coverage sequencing creates problems for k-mer sketching**. 
 
@@ -63,11 +63,13 @@ The statistical model for sylph was completed in early 2023, but I had no idea w
 
 ##### The abundance estimation problem (technical; can skip)
 ----
+
 If you want the abundance of some organism in your metagenomic sample, most profilers do two steps: (1) classify reads against reference genomes and then (2) count the proportion of reads assigned to each genome.
 
 However, if you have (1) two genomes from the same genus, e.g. _Escherichia_, in your database and (2) a single E. coli read, the read may be similar to multiple _Escherichia_ genomes. How do you "classify" reads in this case? All profilers have some way of dealing with this issue (e.g., Kraken uses a taxonomy). 
 
 I didn't have a good way of dealing with this issue (even for "dereplicated" species-level databases) because sylph doesn't map reads---it just checks for k-mers, of which many can be shared between different species. 
+
 ----
 
 **Back to sylph**: In summary, I had a method that can only check if a genome is contained in a sample (quickly and more accurately than other methods), but **not compute the abundance of the organism** (i.e., do _profiling_).
