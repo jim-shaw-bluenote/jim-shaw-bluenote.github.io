@@ -19,7 +19,7 @@ Hi there! I am a postdoctoral fellow at Harvard Medical School and Dana-Farber C
 </p>
 
 <p>
-I got my PhD in Math at the University of Toronto, advised by <a href="https://yunwilliamyu.net/content/">Yun William Yu</a>. Previously, I studied Engineering Physics + Mathematics at the University of British Columbia. 
+I obtained my PhD in Math at the University of Toronto, where I was advised by <a href="https://yunwilliamyu.net/content/">Yun William Yu</a>. Previously, I studied Engineering Physics + Mathematics at the University of British Columbia. 
 </p>
 
 ## Research interests
