@@ -12,7 +12,8 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 \* indicates co-lead authors
 
-1. **Jim Shaw**, Christina Boucher, Yun William Yu, Noelle Noyes, Heng Li. [devider: long-read reconstruction of many diverse haplotypes](https://doi.org/10.1101/2024.11.05.621838) (2024). bioRxiv. Accepted to RECOMB2025.
+1. **Jim Shaw**, Heng Li. [High-resolution metagenome assembly for diverse long-read technologies with myloasm](https://myloasm-docs.github.io/) (2025). Forthcoming. 
+1. **Jim Shaw**, Christina Boucher, Yun William Yu, Noelle Noyes, Heng Li. [devider: long-read reconstruction of many diverse haplotypes](https://doi.org/10.1101/2024.11.05.621838) (2025). bioRxiv. Accepted to RECOMB2025.
 1. Brian Zhang, Grace Oualline, **Jim Shaw**, Yun William Yu. [skandiver: a divergence-based analysis tool for identifying intercellular mobile genetic elements](https://academic.oup.com/bioinformatics/article/40/Supplement_2/ii155/7749064) (2024). ECCB/Bioinformatics. 
 1. **Jim Shaw**, Yun William Yu. [Fairy: fast approximate coverage for multi-sample metagenomic binning](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-024-01861-6) (2024). Microbiome. 
 1. **Jim Shaw**\*, Jean-Sebastien Gounot\*, Hanrong Chen, Niranjan Nagarajan, Yun William Yu. [Floria: Fast and accurate strain haplotyping in metagenomes](https://doi.org/10.1093/bioinformatics/btae252) (2024). ISMB/Bioinformatics.
