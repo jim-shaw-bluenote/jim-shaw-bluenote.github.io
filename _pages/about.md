@@ -15,7 +15,7 @@ social: false # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
@@ -24,7 +24,7 @@ latest_posts:
 ---
 
 <p>
-Hi there! I am a postdoctoral fellow at Harvard Medical School and Dana-Farber Cancer Institute. I work with <a href="https://hlilab.github.io/">Heng Li</a>.
+Hi there! I am an <a href="https://www.nserc-crsng.gc.ca/Students-Etudiants/PD-NP/cpra-bprc_eng.asp#a1">NSERC Postdoctoral Fellow</a> at Harvard Medical School and Dana-Farber Cancer Institute. I work with <a href="https://hlilab.github.io/">Heng Li</a>.
 </p>
 
 <p>
@@ -35,9 +35,12 @@ I obtained my PhD in Math at the University of Toronto, where I was advised by <
 
 <!------>
 
-I develop algorithms/tools/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis). 
+I develop algorithms/tools/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis) and its downstream applications. I tend to approach computational biology with a "full-stack approach", starting from [algorithms backed by theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122) to engineering [widely-used software](https://github.com/bluenote-1577). 
 
-My goal is to accelerate biology by building faster, better algorithms for analyzing trillions of molecular sequences. A full-stack approach—including a mix of engineering, data science, and algorithms—is used; [new theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122) is also developed when appropriate. 
+My computational work is driven by my interest in unraveling the latent complexity of microbiomes. The tremendous activity of microbial communities that live around us have important functional consequences. Two common themes define my work:
 
-My algorithmic work is often driven by my biological interest in unraveling the latent complexity of microbiomes; for example, see my work on [microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [strain resolution](https://doi.org/10.1093/bioinformatics/btae252). 
+1. How do we obtain _novel insights_ from microbiome data through _principled_ computational methods?
+2. How can we _democratize_ the massive computational analysis of microbial omics data?
+
+For example, see my work on [ultrafast microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [rapid metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [strain-level long-read assembly](https://myloasm-docs.github.io/). 
 
