@@ -7,8 +7,17 @@ nav: true
 nav_order: 2
 ---
 
+My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
-My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. The list below is sorted in order of original pre-printing.
+### Selected works
+
+1. **Jim Shaw**, Max Marin, Heng Li. [High-resolution metagenome assembly for diverse long-read technologies with myloasm](https://myloasm-docs.github.io/) (2025). Forthcoming. 
+2. **Jim Shaw**, Yun William Yu. [Rapid species-level metagenome profiling and containment estimation with sylph](https://doi.org/10.1038/s41587-024-02412-y) (2024). Nature Biotechnology.
+3. **Jim Shaw**, Yun William Yu. [Fast and robust metagenomic sequence comparison through sparse chaining with skani](https://doi.org/10.1038/s41592-023-02018-3) (2023). Nature Methods.
+4. **Jim Shaw**, Yun William Yu. [Proving sequence aligners can guarantee accuracy in almost O(m log n) time through an average-case analysis of the seed-chain-extend heuristic](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122.abstract) (2023). Genome Research.  
+
+
+### All publications
 
 \* indicates co-lead authors
 
