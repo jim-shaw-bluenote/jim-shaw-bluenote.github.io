@@ -42,5 +42,5 @@ My computational work is driven by my interest in unraveling the latent complexi
 1. How do we obtain _novel insights_ from microbiome data through _principled_ computational methods?
 2. How can we _democratize_ the massive computational analysis of microbial omics data?
 
-For example, see my work on [ultrafast microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [rapid metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [strain-level long-read assembly](https://myloasm-docs.github.io/). 
+For example, see my work on [ultrafast microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [rapid metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [long-read metagenome assembly](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1). 
 
