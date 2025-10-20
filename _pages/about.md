@@ -37,7 +37,7 @@ I obtained my PhD in Math at the University of Toronto, where I was advised by <
 
 I develop algorithms/software/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis) and apply these bioinformatics approaches to investigate microbiome genomics. I like to approach computational biology with a "full-stack approach", starting from [algorithms backed by theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122) to engineering [widely-used software](https://github.com/bluenote-1577), and then hopefully discovering something interesting about how microbes evolve. 
 
-Two common themes define my work:
+Two intertwined themes define my work:
 
 1. How do we obtain _novel insights_ from microbiome genome evolution through _principled_ computational and analytical methods?
 2. How can we leverage sophisticated bioinformatics algorithms to _democratize_ and _improve_ the massive computational analysis of microbial omics data?
