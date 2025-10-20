@@ -35,12 +35,12 @@ I obtained my PhD in Math at the University of Toronto, where I was advised by <
 
 <!------>
 
-I develop algorithms/tools/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis) and its downstream applications. I tend to approach computational biology with a "full-stack approach", starting from [algorithms backed by theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122) to engineering [widely-used software](https://github.com/bluenote-1577). 
+I develop algorithms/software/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis) and apply these bioinformatics approaches to investigate microbiome genomics. I like to approach computational biology with a "full-stack approach", starting from [algorithms backed by theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122) to engineering [widely-used software](https://github.com/bluenote-1577), and then hopefully discovering something interesting about how microbes evolve. 
 
-My computational work is driven by my interest in unraveling the latent complexity of microbiomes. The tremendous activity of microbial communities that live around us have important functional consequences. Two common themes define my work:
+Two common themes define my work:
 
-1. How do we obtain _novel insights_ from microbiome data through _principled_ computational methods?
-2. How can we _democratize_ the massive computational analysis of microbial omics data?
+1. How do we obtain _novel insights_ from microbiome genome evolution through _principled_ computational and analytical methods?
+2. How can we leverage sophisticated bioinformatics algorithms to _democratize_ and _improve_ the massive computational analysis of microbial omics data?
 
 For example, see my work on [ultrafast microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [rapid metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [long-read metagenome assembly](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1). 
 
