@@ -42,7 +42,7 @@ I like to approach computational biology with a "full-stack approach": start fro
 More specifically, two intertwined themes define my work:
 
 1. Obtaining _novel insights_ about microbiome genome evolution (especially due to mobile genetic elements) through _principled_ computational and analytical methods.
-2. Building sophisticated bioinformatics algorithms to _democratize_ and _improve_ the analysis of massive microbial and meta-omics data?
+2. Building sophisticated bioinformatics algorithms to _democratize_ and _improve_ the analysis of massive microbial and meta-omics data.
 
 For example, see my work on [ultrafast microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [rapid metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [long-read metagenome assembly](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1). 
 
