@@ -14,9 +14,9 @@ The post is a combination of
 * Opinions for future profiler development choices
 * Pre-rebuttal to reviewers :) (just kidding, somewhat)
 
-To be honest, I'm not sure who my target audience is for this blog post. Tool developers may find it interesting. I think practitioners may also find the information useful for illuminating why profilers are the way they are. Hopefully, you'll at least learn something about taxonomic profiling. 
+I think practitioners may find this post useful for illuminating why profilers are the way they are. Hopefully, you'll at least learn something about taxonomic profiling. 
 
-_Note: I am a computational biologist with some opinions. In particular, I’m not a microbiologist nor a definitive source. I’m open to feedback and opinions, especially if I say something wrong about your tool._
+_Note: I’m open to feedback and opinions, especially if I say something wrong about your tool._
 
 ## Problem 1 - NCBI resource usability for metagenomic databases
 
@@ -30,7 +30,7 @@ __Genome Taxonomy Database (GTDB)__: a database + taxonomy for prokaryotes, dist
 
 The default database offered by many profilers, such as [Kraken](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0), uses the NCBI taxonomy + reference genomes from RefSeq. Other methods like [mOTUs](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-022-01410-z) or [MetaPhlAn](https://www.nature.com/articles/s41587-023-01688-w) use the NCBI taxonomy as well, but not just RefSeq genomes. The most popular standardized benchmark, **the [CAMI](https://www.nature.com/articles/s41592-022-01431-4) benchmark**, uses RefSeq/NCBI taxonomy. 
 
-I first want to recognize the amazing work done by the creators of the RefSeq and the NCBI taxonomies. They are invaluable resources. However, I have a few grievances _from a purely metagenomic profiling perspective_. 
+I first want to recognize the amazing work done by the creators of the RefSeq and the NCBI taxonomies. They are invaluable resources. However, I have a few grievances _from a purely profiling perspective_. 
 
 ### Lack of RefSeq database standardization across tools
 
@@ -50,9 +50,9 @@ The documentation for parsing taxonomy files, getting accession2taxid, etc are s
 
 **Why should a user care?** Have you ever tried to add new taxonomic nodes to a Kraken database? [Not so forgiving]( https://github.com/DerrickWood/kraken2/issues/436). This isn’t the Kraken developers’ fault, it’s because they had to make it concordant with the NCBI taxonomy, which was never really meant to be used for creating profiling databases. 
 
-## Problem 2 - Benchmarking against other tools and taxonomies is hard
+## Problem 2 - Benchmarking tools is hard, and no one knows which tools are actually good
 
-A large part of developing a profiler comes down to benchmarking (anywhere from 20-50% of the time). I feel that benchmarking profilers is extremely difficult due to _database choice_. This will be a constant theme for the following points. 
+A large part of understanding a profiler's performance comes down to benchmarking. I feel that benchmarking profilers is extremely difficult due to _database choice_. This will be a constant theme for the following points. 
 
 ### Poor synthetic metagenome construction is easy and causes distrust
 
@@ -76,7 +76,7 @@ When you are comparing tools, there are three options.
 2.  __(B)__ You use _the same_ database+taxonomy for every method. 
 3.  __(C)__ You use the the same _taxonomy_ but different databases.
 
-Option **(B)** seems mostly fair and is done by many manuscripts. 
+Option **(B)** seems mostly fair and is done by many manuscripts. But some tools were designed with certain database structures in mind. Kraken2, for example, prefers a redundant database over a dereplicated one. 
 
 Option **(A), (C)** possibly represents a more accurate representation of actual usage -- I bet folks out there use Kraken2's RefSeq default database and MetaPhlAn4's default marker database, which are completely different. 
 
@@ -91,7 +91,7 @@ Option **(C)** suffers from the first problem above, but not the second.
 
 What’s a good solution? To be honest, I don’t know. Some thoughts:
 
-* Marker gene methods are extremely performant. Reviewers will complain if you don’t benchmark, but benchmarking against them means using their fixed taxonomies and databases. 
+* Marker gene methods are extremely performant. But benchmarking against them means using their fixed taxonomies and databases. 
 * Many people are using GTDB now (see [here](https://www.biorxiv.org/content/10.1101/712166v1), for example). I won’t get into NCBI vs GTDB here. 
 * I tried to map MetaPhlAn4 taxonomic profiles to the GTDB, but NCBI and GTDB are inherently not 1-to-1, so issues arose. 
 * Even if you use the “NCBI taxonomy”, are you comparing across versions? 
@@ -100,7 +100,7 @@ I am now cautious when I interpret results between MetaPhlAn/mOTUs and non-marke
 
 ## Problem 3 -  Standardizing taxonomic profiling outputs
 
-Profilers output their profiles in different formats, and it’s up to the user to standardize them. This is annoying for users, but also for developers. I’ll discuss why I think this situation ended up happening. 
+Software output their profiling results in different formats, and it’s up to the user to standardize them. This is annoying for users. I’ll discuss why I think this situation ended up happening. 
 
 ### Methods do different things
 
@@ -127,11 +127,9 @@ I think these formats are reasonable, but here are some rudimentary thoughts.
 
 ## Conclusion
 
-Developing profilers is hard. The differences between methods on (1) database, (2) taxonomy, and (3) outputs make development and benchmarking difficult. I have a newfound respect for the people behind large standardized benchmarks, especially the folks behind CAMI for tackling these challenges. 
+Building, using, and understanding taxonomic profilers is surprisingly difficult. The differences between methods on (1) database, (2) taxonomy, and (3) outputs makes interpreting benchmarks impossible. Since developing a profiler, I have a newfound respect for the people behind large standardized benchmarks, especially the folks behind CAMI for tackling these challenges. 
 
-I think correctly handling all of the pitfalls in benchmarking and development is too challenging for someone who wants to create better algorithms. 
-
-My ideal future as a tool developer?
+My ideal future as a tool developer / user?
 
 1. Let’s have a collection of standardized and versioned databases, each with (1) a set of genomes and (2) an associated taxonomy file that is easy to parse.
 2. We can extend each database by simply dropping in a fasta file and adding a new line in the taxonomy file. 
