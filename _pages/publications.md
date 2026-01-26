@@ -11,7 +11,7 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 ### Selected works
 
-1. **Jim Shaw**, Maximillian G. Marin, Heng Li. [High-resolution metagenome assembly for modern long reads with myloasm](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1) (2025). bioRxiv. 
+1. **Jim Shaw**, Maximillian G. Marin, Heng Li. [High-resolution metagenome assembly for modern long reads with myloasm](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1) (2025). bioRxiv. _Accepted in Principle to Nature Biotechnology._ 
 2. **Jim Shaw**, Yun William Yu. [Rapid species-level metagenome profiling and containment estimation with sylph](https://doi.org/10.1038/s41587-024-02412-y) (2024). Nature Biotechnology.
 3. **Jim Shaw**, Yun William Yu. [Fast and robust metagenomic sequence comparison through sparse chaining with skani](https://doi.org/10.1038/s41592-023-02018-3) (2023). Nature Methods.
 4. **Jim Shaw**, Yun William Yu. [Proving sequence aligners can guarantee accuracy in almost O(m log n) time through an average-case analysis of the seed-chain-extend heuristic](https://genome.cshlp.org/content/early/2023/03/29/gr.277637.122.abstract) (2023). Genome Research and RECOMB 2023.  
@@ -21,7 +21,7 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 \* indicates co-lead authors
 
-1. **Jim Shaw**, Maximillian G. Marin, Heng Li. [High-resolution metagenome assembly for modern long reads with myloasm](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1) (2025). bioRxiv. 
+1. **Jim Shaw**, Maximillian G. Marin, Heng Li. [High-resolution metagenome assembly for modern long reads with myloasm](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1) (2025). bioRxiv. _Accepted in Principle to Nature Biotechnology._
 1. **Jim Shaw**, Christina Boucher, Yun William Yu, Noelle Noyes, Heng Li. [devider: long-read reconstruction of many diverse haplotypes](https://genome.cshlp.org/content/early/2025/09/23/gr.280510.125.abstract) (2025). Genome Research. 
 1. Brian Zhang, Grace Oualline, **Jim Shaw**, Yun William Yu. [skandiver: a divergence-based analysis tool for identifying intercellular mobile genetic elements](https://academic.oup.com/bioinformatics/article/40/Supplement_2/ii155/7749064) (2024). ECCB/Bioinformatics. 
 1. **Jim Shaw**, Yun William Yu. [Fairy: fast approximate coverage for multi-sample metagenomic binning](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-024-01861-6) (2024). Microbiome. 
