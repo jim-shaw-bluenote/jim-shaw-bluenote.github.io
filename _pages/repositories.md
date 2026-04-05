@@ -9,6 +9,7 @@ nav_order: 4
 
 Here's a list of software that I've been involved with creating, either directly (code I wrote) or indirectly (devised methods or supervised). 
 
+- [savont](https://github.com/bluenote-1577/savont) - amplicon sequence variants (ASVs) from modern long-read amplicon sequencing. 
 - [myloasm](https://myloasm-docs.github.io/) - de novo long-read metagenome assembler for even noisy sequences
 - [devider](https://github.com/bluenote-1577/devider) - long-read haplotypes for highly-heterogenous sequencing mixtures. 
 - [fairy](https://github.com/bluenote-1577/fairy) - fast approximate coverage for metagenomic binning.
