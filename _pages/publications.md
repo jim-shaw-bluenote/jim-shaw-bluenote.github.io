@@ -21,6 +21,7 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 
 \* indicates co-lead authors
 
+1. **Jim Shaw**, Marie Riisgaard-Jensen, Kasper Skytte Andersen, Rasmus Kirkegaard, Morten Kam Dahl Dueholm, Heng Li. [Sensitive long-read amplicon sequence variant recovery with savont](https://www.biorxiv.org/content/10.64898/2026.05.26.727271v1) (2026). bioRxiv. 
 1. **Jim Shaw**, Maximillian G. Marin, Heng Li. [High-resolution metagenome assembly for modern long reads with myloasm](https://www.nature.com/articles/s41587-026-03053-z) (2026). Nature Biotechnology. 
 1. **Jim Shaw**, Christina Boucher, Yun William Yu, Noelle Noyes, Heng Li. [devider: long-read reconstruction of many diverse haplotypes](https://genome.cshlp.org/content/early/2025/09/23/gr.280510.125.abstract) (2025). Genome Research. 
 1. Brian Zhang, Grace Oualline, **Jim Shaw**, Yun William Yu. [skandiver: a divergence-based analysis tool for identifying intercellular mobile genetic elements](https://academic.oup.com/bioinformatics/article/40/Supplement_2/ii155/7749064) (2024). ECCB/Bioinformatics. 
