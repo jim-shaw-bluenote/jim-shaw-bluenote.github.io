@@ -7,7 +7,11 @@ nav: true
 nav_order: 4
 ---
 
-Here's a list of software that I've been involved with creating, either directly (code I wrote) or indirectly (devised methods or supervised). 
+Please see [my new lab website for information about software I have written.](https://jshaw-lab-compbio.github.io/software/)
+
+Trivia: my github name, [bluenote-1577](https://github.com/bluenote-1577), is the record number for an [album](https://bestofjazz.org/wp-content/uploads/John-Coltrane-Blue-Train.png). 
+
+<!-- Here's a list of software that I've been involved with creating, either directly (code I wrote) or indirectly (devised methods or supervised). 
 
 - [savont](https://github.com/bluenote-1577/savont) - amplicon sequence variants (ASVs) from modern long-read amplicon sequencing. 
 - [myloasm](https://myloasm-docs.github.io/) - de novo long-read metagenome assembler for even noisy sequences
@@ -21,5 +25,5 @@ Here's a list of software that I've been involved with creating, either directly
 - [OPERA-MS](https://github.com/CSB5/OPERA-MS) - hybrid metagenomic assembler for long and short-reads.
 
 
-Trivia: my github name, [bluenote-1577](https://github.com/bluenote-1577), is the record number for an [album](https://bestofjazz.org/wp-content/uploads/John-Coltrane-Blue-Train.png). 
 
+-->

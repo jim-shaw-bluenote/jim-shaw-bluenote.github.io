@@ -7,7 +7,19 @@ nav: true
 nav_order: 2
 ---
 
-My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
+This page is now replaced by my [new lab website](https://jshaw-lab-compbio.github.io/publications/). My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) should contain a list of my publication and pre-prints. 
+
+## Talks and presentations
+
+1. [Floria talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/ISMB2024-Floria-JimShaw.pdf). (2024). ISMB 2024, Montreal.
+2. [sylph talk v2](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/GLBIO-TalkJimShaw.pdf). (2024). Great Lakes Bioinformatics 2024, Pittsburgh. [Recorded talk available here](https://www.youtube.com/watch?v=EnZhgq_wzhY&ab_channel=ISCB).
+3. [sylph talk v1](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/sylph_talk.pdf). (2023). Genome Informatics 2023, Cold Spring Harbor Laboratory.
+4. [skani talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/2023ISMB_SKANI_TALK.pdf). (2023). ISMB 2023, Lyon.
+5. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul. [Recorded talk available here](https://www.youtube.com/watch?v=zIPIlXy7GM0&ab_channel=RECOMBConferenceSeries) (the slides in the recorded talk are delayed).
+
+
+
+<!-- My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAAAJ&hl=en) also contains a list of my publications/pre-prints. 
 
 ### Selected works
 
@@ -39,11 +51,5 @@ My [Google Scholar profile](https://scholar.google.com/citations?user=hNAwGS8AAA
 11. Simone Hu\*, Oliver Schnetz\*, **Jim Shaw**\*, Karen Yeats\*. [Further investigations into the graph theory of phi^4-periods and the c2 invariant](https://doi.org/10.4171/aihpd/123) (2020). Annales de l'Institut Henri Poincare D.
 12. D. Bertrand, **J. Shaw**, M Narayan, H.Q.A. Ng, S. Kumar, C. Li, M. Dvornicic, J.P. Soldo, J.Y. Kho, O.T. Ng, T. Barkham, B. Young, K. Marimuthu, K.R. Chng, M. Sikic, N. Nagarajan. [Hybrid metagenomic assembly enables high-resolution analysis of resistance determinants and mobile elements in human microbiomes](https://www.nature.com/articles/s41587-019-0191-2) (2019). Nature Biotechnology.
 
-## Talks and presentations
 
-1. [Floria talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/ISMB2024-Floria-JimShaw.pdf). (2024). ISMB 2024, Montreal.
-2. [sylph talk v2](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/GLBIO-TalkJimShaw.pdf). (2024). Great Lakes Bioinformatics 2024, Pittsburgh. [Recorded talk available here](https://www.youtube.com/watch?v=EnZhgq_wzhY&ab_channel=ISCB).
-3. [sylph talk v1](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/sylph_talk.pdf). (2023). Genome Informatics 2023, Cold Spring Harbor Laboratory.
-4. [skani talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/2023ISMB_SKANI_TALK.pdf). (2023). ISMB 2023, Lyon.
-5. [Seed-chain-extend alignment rigorous average-case analysis talk](https://github.com/jim-shaw-bluenote/jim-shaw-bluenote.github.io/blob/master/jims_assets/recomb2023_talk.pdf). (2023). RECOMB 2023, Istanbul. [Recorded talk available here](https://www.youtube.com/watch?v=zIPIlXy7GM0&ab_channel=RECOMBConferenceSeries) (the slides in the recorded talk are delayed).
-
+-->

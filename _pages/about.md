@@ -18,22 +18,31 @@ announcements:
   limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
+
 <p>
-Hi there! I am an <a href="https://www.nserc-crsng.gc.ca/Students-Etudiants/PD-NP/cpra-bprc_eng.asp#a1">NSERC Postdoctoral Fellow</a> at Harvard Medical School and Dana-Farber Cancer Institute. I work with <a href="https://hlilab.github.io/">Heng Li</a>. You can reach me at jshaw(at)ds.dfci.harvard.edu. 
+Hi there! I am an incoming Assistant Professor at the University of North Carolina (Chapel Hill), starting July 2027 in the Department of Computer Science. </p>
+
+<p> I develop algorithms/software/theory for biological sequence analysis and apply these methods to investigate important problems in microbial and microbiome genomics. <b>Please see <a href="https://jshaw-lab-compbio.github.io/">my lab website for updated information on my research</a>.</b>
+</p>
+
+<p>
+Currently, I am an <a href="https://www.nserc-crsng.gc.ca/Students-Etudiants/PD-NP/cpra-bprc_eng.asp#a1">NSERC Postdoctoral Fellow</a> at Harvard Medical School and Dana-Farber Cancer Institute. I work with <a href="https://hlilab.github.io/">Heng Li</a>. You can reach me at jshaw(at)ds.dfci.harvard.edu. 
 </p>
 
 <p>
 I obtained my PhD in Math at the University of Toronto, where I was advised by <a href="https://yunwilliamyu.net/content/">Yun William Yu</a>. Previously, I studied Engineering Physics + Mathematics at the University of British Columbia. 
 </p>
 
-## Research interests
 
-<!------>
+<!-- ## Research interests
+
+Please see my [lab website for information regarding my research.](https://jshaw-lab-compbio.github.io)
+
 
 I develop algorithms/software/theory for [biological sequence analysis](https://en.wikipedia.org/wiki/Sequence_analysis) and apply these methods to investigate important problems in microbial and microbiome genomics. 
 
@@ -42,5 +51,6 @@ More specifically, two intertwined themes define my current work:
 1. Building sophisticated bioinformatics tools to improve the analysis of massive microbial and meta-omics data.
 2. Obtaining new insights about microbiome genome evolution through principled analytical methods.
 
-For example, see my work on [ultrafast microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [rapid metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [long-read metagenome assembly](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1). When I have the chance, I also enjoy doing [a bit of theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122).
+For example, see my work on [ultrafast microbial divergence computation](https://www.nature.com/articles/s41592-023-02018-3), [rapid metagenome profiling](https://doi.org/10.1038/s41587-024-02412-y), and [long-read metagenome assembly](https://www.biorxiv.org/content/10.1101/2025.09.05.674543v1). When I have the chance, I also enjoy doing [a bit of theory](https://www.genome.org/cgi/doi/10.1101/gr.277637.122). 
 
+-->

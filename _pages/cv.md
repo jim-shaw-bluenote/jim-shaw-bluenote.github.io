@@ -1,11 +1,9 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-cv_pdf: OfficialCV.pdf
-description: 
-toc:
-  sidebar: left
 ---
+
+My CV has moved to my lab website: [jshaw-lab-compbio.github.io/team](https://jshaw-lab-compbio.github.io/team/).
