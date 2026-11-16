@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: headshot.jpeg
+  image: orca.jpg
   image_circular: false # crops the image to make it circular
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -25,7 +25,7 @@ latest_posts:
 
 
 <p>
-Hi there! I am an incoming Assistant Professor at the University of North Carolina (Chapel Hill), starting July 2027 in the Department of Computer Science. </p>
+Hi there! <b>I am an incoming Assistant Professor at the University of North Carolina (Chapel Hill), starting July 2027 in the Department of Computer Science.</b> </p>
 
 <p> I develop algorithms/software/theory for biological sequence analysis and apply these methods to investigate important problems in microbial and microbiome genomics. <b>Please see <a href="https://jshaw-lab-compbio.github.io/">my lab website for updated information on my research</a>.</b>
 </p>
